@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jaeha\\source\\repos\\Week 3\\Mod3Enumdemo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2BDE5A65-3152-4A88-9731-903709501685}|Mod3Enumdemo.csproj|c:\\users\\jaeha\\source\\repos\\week 3\\mod3enumdemo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BDE5A65-3152-4A88-9731-903709501685}|Mod3Enumdemo.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BDE5A65-3152-4A88-9731-903709501685}|Mod3Enumdemo.csproj|c:\\users\\jaeha\\source\\repos\\week 3\\mod3enumdemo\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BDE5A65-3152-4A88-9731-903709501685}|Mod3Enumdemo.csproj|solutionrelative:book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BDE5A65-3152-4A88-9731-903709501685}|Mod3Enumdemo.csproj|c:\\users\\jaeha\\source\\repos\\week 3\\mod3enumdemo\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BDE5A65-3152-4A88-9731-903709501685}|Mod3Enumdemo.csproj|solutionrelative:todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\Week 3\\Mod3Enumdemo\\Book.cs",
+              "RelativeDocumentMoniker": "Book.cs",
+              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\Week 3\\Mod3Enumdemo\\Book.cs*",
+              "RelativeToolTip": "Book.cs*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T16:22:33.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ToDo.cs",
+              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\Week 3\\Mod3Enumdemo\\ToDo.cs",
+              "RelativeDocumentMoniker": "ToDo.cs",
+              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\Week 3\\Mod3Enumdemo\\ToDo.cs",
+              "RelativeToolTip": "ToDo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T15:27:07.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\Week 3\\Mod3Enumdemo\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\Week 3\\Mod3Enumdemo\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAABcAAAAAAAAAAAA6wDUAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T15:13:44.58Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

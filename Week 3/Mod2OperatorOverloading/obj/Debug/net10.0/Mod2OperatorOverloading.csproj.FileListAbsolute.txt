@@ -1,0 +1,14 @@
+C:\Users\jaeha\source\repos\Week 3\Mod2OperatorOverloading\bin\Debug\net10.0\Mod2OperatorOverloading.exe
+C:\Users\jaeha\source\repos\Week 3\Mod2OperatorOverloading\bin\Debug\net10.0\Mod2OperatorOverloading.deps.json
+C:\Users\jaeha\source\repos\Week 3\Mod2OperatorOverloading\bin\Debug\net10.0\Mod2OperatorOverloading.runtimeconfig.json
+C:\Users\jaeha\source\repos\Week 3\Mod2OperatorOverloading\bin\Debug\net10.0\Mod2OperatorOverloading.dll
+C:\Users\jaeha\source\repos\Week 3\Mod2OperatorOverloading\bin\Debug\net10.0\Mod2OperatorOverloading.pdb
+C:\Users\jaeha\source\repos\Week 3\Mod2OperatorOverloading\obj\Debug\net10.0\Mod2OperatorOverloading.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\Week 3\Mod2OperatorOverloading\obj\Debug\net10.0\Mod2OperatorOverloading.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\Week 3\Mod2OperatorOverloading\obj\Debug\net10.0\Mod2OperatorOverloading.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\Week 3\Mod2OperatorOverloading\obj\Debug\net10.0\Mod2OperatorOverloading.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\Week 3\Mod2OperatorOverloading\obj\Debug\net10.0\Mod2OperatorOverloading.dll
+C:\Users\jaeha\source\repos\Week 3\Mod2OperatorOverloading\obj\Debug\net10.0\refint\Mod2OperatorOverloading.dll
+C:\Users\jaeha\source\repos\Week 3\Mod2OperatorOverloading\obj\Debug\net10.0\Mod2OperatorOverloading.pdb
+C:\Users\jaeha\source\repos\Week 3\Mod2OperatorOverloading\obj\Debug\net10.0\Mod2OperatorOverloading.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\Week 3\Mod2OperatorOverloading\obj\Debug\net10.0\ref\Mod2OperatorOverloading.dll

@@ -1,0 +1,14 @@
+C:\Users\jaeha\source\repos\Week 3\Mod2MethodsDemo\bin\Debug\net10.0\Mod2MethodsDemo.exe
+C:\Users\jaeha\source\repos\Week 3\Mod2MethodsDemo\bin\Debug\net10.0\Mod2MethodsDemo.deps.json
+C:\Users\jaeha\source\repos\Week 3\Mod2MethodsDemo\bin\Debug\net10.0\Mod2MethodsDemo.runtimeconfig.json
+C:\Users\jaeha\source\repos\Week 3\Mod2MethodsDemo\bin\Debug\net10.0\Mod2MethodsDemo.dll
+C:\Users\jaeha\source\repos\Week 3\Mod2MethodsDemo\bin\Debug\net10.0\Mod2MethodsDemo.pdb
+C:\Users\jaeha\source\repos\Week 3\Mod2MethodsDemo\obj\Debug\net10.0\Mod2MethodsDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\Week 3\Mod2MethodsDemo\obj\Debug\net10.0\Mod2MethodsDemo.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\Week 3\Mod2MethodsDemo\obj\Debug\net10.0\Mod2MethodsDemo.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\Week 3\Mod2MethodsDemo\obj\Debug\net10.0\Mod2MethodsDemo.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\Week 3\Mod2MethodsDemo\obj\Debug\net10.0\Mod2MethodsDemo.dll
+C:\Users\jaeha\source\repos\Week 3\Mod2MethodsDemo\obj\Debug\net10.0\refint\Mod2MethodsDemo.dll
+C:\Users\jaeha\source\repos\Week 3\Mod2MethodsDemo\obj\Debug\net10.0\Mod2MethodsDemo.pdb
+C:\Users\jaeha\source\repos\Week 3\Mod2MethodsDemo\obj\Debug\net10.0\Mod2MethodsDemo.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\Week 3\Mod2MethodsDemo\obj\Debug\net10.0\ref\Mod2MethodsDemo.dll

@@ -1,0 +1,14 @@
+C:\Users\jaeha\source\repos\Assignment 1.1.1\bin\Debug\net10.0\Assignment 1.1.1.exe
+C:\Users\jaeha\source\repos\Assignment 1.1.1\bin\Debug\net10.0\Assignment 1.1.1.deps.json
+C:\Users\jaeha\source\repos\Assignment 1.1.1\bin\Debug\net10.0\Assignment 1.1.1.runtimeconfig.json
+C:\Users\jaeha\source\repos\Assignment 1.1.1\bin\Debug\net10.0\Assignment 1.1.1.dll
+C:\Users\jaeha\source\repos\Assignment 1.1.1\bin\Debug\net10.0\Assignment 1.1.1.pdb
+C:\Users\jaeha\source\repos\Assignment 1.1.1\obj\Debug\net10.0\Assignment 1.1.1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\Assignment 1.1.1\obj\Debug\net10.0\Assignment 1.1.1.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\Assignment 1.1.1\obj\Debug\net10.0\Assignment 1.1.1.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\Assignment 1.1.1\obj\Debug\net10.0\Assignment 1.1.1.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\Assignment 1.1.1\obj\Debug\net10.0\Assignment 1.1.1.dll
+C:\Users\jaeha\source\repos\Assignment 1.1.1\obj\Debug\net10.0\refint\Assignment 1.1.1.dll
+C:\Users\jaeha\source\repos\Assignment 1.1.1\obj\Debug\net10.0\Assignment 1.1.1.pdb
+C:\Users\jaeha\source\repos\Assignment 1.1.1\obj\Debug\net10.0\Assignment 1.1.1.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\Assignment 1.1.1\obj\Debug\net10.0\ref\Assignment 1.1.1.dll

@@ -1,0 +1,14 @@
+C:\Users\jaeha\source\repos\Week2ChallengeLabs\bin\Debug\net10.0\Week2ChallengeLabs.exe
+C:\Users\jaeha\source\repos\Week2ChallengeLabs\bin\Debug\net10.0\Week2ChallengeLabs.deps.json
+C:\Users\jaeha\source\repos\Week2ChallengeLabs\bin\Debug\net10.0\Week2ChallengeLabs.runtimeconfig.json
+C:\Users\jaeha\source\repos\Week2ChallengeLabs\bin\Debug\net10.0\Week2ChallengeLabs.dll
+C:\Users\jaeha\source\repos\Week2ChallengeLabs\bin\Debug\net10.0\Week2ChallengeLabs.pdb
+C:\Users\jaeha\source\repos\Week2ChallengeLabs\obj\Debug\net10.0\Week2ChallengeLabs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\Week2ChallengeLabs\obj\Debug\net10.0\Week2ChallengeLabs.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\Week2ChallengeLabs\obj\Debug\net10.0\Week2ChallengeLabs.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\Week2ChallengeLabs\obj\Debug\net10.0\Week2ChallengeLabs.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\Week2ChallengeLabs\obj\Debug\net10.0\Week2ChallengeLabs.dll
+C:\Users\jaeha\source\repos\Week2ChallengeLabs\obj\Debug\net10.0\refint\Week2ChallengeLabs.dll
+C:\Users\jaeha\source\repos\Week2ChallengeLabs\obj\Debug\net10.0\Week2ChallengeLabs.pdb
+C:\Users\jaeha\source\repos\Week2ChallengeLabs\obj\Debug\net10.0\Week2ChallengeLabs.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\Week2ChallengeLabs\obj\Debug\net10.0\ref\Week2ChallengeLabs.dll

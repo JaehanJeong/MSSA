@@ -1,0 +1,14 @@
+C:\Users\jaeha\source\repos\Assignment 2.2\bin\Debug\net10.0\Assignment 2.2.exe
+C:\Users\jaeha\source\repos\Assignment 2.2\bin\Debug\net10.0\Assignment 2.2.deps.json
+C:\Users\jaeha\source\repos\Assignment 2.2\bin\Debug\net10.0\Assignment 2.2.runtimeconfig.json
+C:\Users\jaeha\source\repos\Assignment 2.2\bin\Debug\net10.0\Assignment 2.2.dll
+C:\Users\jaeha\source\repos\Assignment 2.2\bin\Debug\net10.0\Assignment 2.2.pdb
+C:\Users\jaeha\source\repos\Assignment 2.2\obj\Debug\net10.0\Assignment 2.2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\Assignment 2.2\obj\Debug\net10.0\Assignment 2.2.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\Assignment 2.2\obj\Debug\net10.0\Assignment 2.2.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\Assignment 2.2\obj\Debug\net10.0\Assignment 2.2.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\Assignment 2.2\obj\Debug\net10.0\Assignment 2.2.dll
+C:\Users\jaeha\source\repos\Assignment 2.2\obj\Debug\net10.0\refint\Assignment 2.2.dll
+C:\Users\jaeha\source\repos\Assignment 2.2\obj\Debug\net10.0\Assignment 2.2.pdb
+C:\Users\jaeha\source\repos\Assignment 2.2\obj\Debug\net10.0\Assignment 2.2.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\Assignment 2.2\obj\Debug\net10.0\ref\Assignment 2.2.dll

@@ -1,0 +1,14 @@
+C:\Users\jaeha\source\repos\Week 3\Mod3Enumdemo\bin\Debug\net10.0\Mod3Enumdemo.exe
+C:\Users\jaeha\source\repos\Week 3\Mod3Enumdemo\bin\Debug\net10.0\Mod3Enumdemo.deps.json
+C:\Users\jaeha\source\repos\Week 3\Mod3Enumdemo\bin\Debug\net10.0\Mod3Enumdemo.runtimeconfig.json
+C:\Users\jaeha\source\repos\Week 3\Mod3Enumdemo\bin\Debug\net10.0\Mod3Enumdemo.dll
+C:\Users\jaeha\source\repos\Week 3\Mod3Enumdemo\bin\Debug\net10.0\Mod3Enumdemo.pdb
+C:\Users\jaeha\source\repos\Week 3\Mod3Enumdemo\obj\Debug\net10.0\Mod3Enumdemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\Week 3\Mod3Enumdemo\obj\Debug\net10.0\Mod3Enumdemo.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\Week 3\Mod3Enumdemo\obj\Debug\net10.0\Mod3Enumdemo.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\Week 3\Mod3Enumdemo\obj\Debug\net10.0\Mod3Enumdemo.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\Week 3\Mod3Enumdemo\obj\Debug\net10.0\Mod3Enumdemo.dll
+C:\Users\jaeha\source\repos\Week 3\Mod3Enumdemo\obj\Debug\net10.0\refint\Mod3Enumdemo.dll
+C:\Users\jaeha\source\repos\Week 3\Mod3Enumdemo\obj\Debug\net10.0\Mod3Enumdemo.pdb
+C:\Users\jaeha\source\repos\Week 3\Mod3Enumdemo\obj\Debug\net10.0\Mod3Enumdemo.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\Week 3\Mod3Enumdemo\obj\Debug\net10.0\ref\Mod3Enumdemo.dll

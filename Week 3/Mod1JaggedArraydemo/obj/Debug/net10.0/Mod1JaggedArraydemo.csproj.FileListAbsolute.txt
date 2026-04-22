@@ -1,0 +1,14 @@
+C:\Users\jaeha\source\repos\Week 3\Mod1JaggedArraydemo\bin\Debug\net10.0\Mod1JaggedArraydemo.exe
+C:\Users\jaeha\source\repos\Week 3\Mod1JaggedArraydemo\bin\Debug\net10.0\Mod1JaggedArraydemo.deps.json
+C:\Users\jaeha\source\repos\Week 3\Mod1JaggedArraydemo\bin\Debug\net10.0\Mod1JaggedArraydemo.runtimeconfig.json
+C:\Users\jaeha\source\repos\Week 3\Mod1JaggedArraydemo\bin\Debug\net10.0\Mod1JaggedArraydemo.dll
+C:\Users\jaeha\source\repos\Week 3\Mod1JaggedArraydemo\bin\Debug\net10.0\Mod1JaggedArraydemo.pdb
+C:\Users\jaeha\source\repos\Week 3\Mod1JaggedArraydemo\obj\Debug\net10.0\Mod1JaggedArraydemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\Week 3\Mod1JaggedArraydemo\obj\Debug\net10.0\Mod1JaggedArraydemo.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\Week 3\Mod1JaggedArraydemo\obj\Debug\net10.0\Mod1JaggedArraydemo.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\Week 3\Mod1JaggedArraydemo\obj\Debug\net10.0\Mod1JaggedArraydemo.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\Week 3\Mod1JaggedArraydemo\obj\Debug\net10.0\Mod1JaggedArraydemo.dll
+C:\Users\jaeha\source\repos\Week 3\Mod1JaggedArraydemo\obj\Debug\net10.0\refint\Mod1JaggedArraydemo.dll
+C:\Users\jaeha\source\repos\Week 3\Mod1JaggedArraydemo\obj\Debug\net10.0\Mod1JaggedArraydemo.pdb
+C:\Users\jaeha\source\repos\Week 3\Mod1JaggedArraydemo\obj\Debug\net10.0\Mod1JaggedArraydemo.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\Week 3\Mod1JaggedArraydemo\obj\Debug\net10.0\ref\Mod1JaggedArraydemo.dll
