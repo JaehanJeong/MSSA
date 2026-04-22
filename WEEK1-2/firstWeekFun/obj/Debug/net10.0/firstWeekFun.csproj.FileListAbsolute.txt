@@ -1,0 +1,14 @@
+C:\Users\jaeha\source\repos\firstWeekFun\obj\Debug\net10.0\firstWeekFun.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\firstWeekFun\obj\Debug\net10.0\firstWeekFun.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\firstWeekFun\obj\Debug\net10.0\firstWeekFun.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\firstWeekFun\obj\Debug\net10.0\firstWeekFun.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\firstWeekFun\bin\Debug\net10.0\firstWeekFun.exe
+C:\Users\jaeha\source\repos\firstWeekFun\bin\Debug\net10.0\firstWeekFun.deps.json
+C:\Users\jaeha\source\repos\firstWeekFun\bin\Debug\net10.0\firstWeekFun.runtimeconfig.json
+C:\Users\jaeha\source\repos\firstWeekFun\bin\Debug\net10.0\firstWeekFun.dll
+C:\Users\jaeha\source\repos\firstWeekFun\bin\Debug\net10.0\firstWeekFun.pdb
+C:\Users\jaeha\source\repos\firstWeekFun\obj\Debug\net10.0\firstWeekFun.dll
+C:\Users\jaeha\source\repos\firstWeekFun\obj\Debug\net10.0\refint\firstWeekFun.dll
+C:\Users\jaeha\source\repos\firstWeekFun\obj\Debug\net10.0\firstWeekFun.pdb
+C:\Users\jaeha\source\repos\firstWeekFun\obj\Debug\net10.0\firstWeekFun.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\firstWeekFun\obj\Debug\net10.0\ref\firstWeekFun.dll

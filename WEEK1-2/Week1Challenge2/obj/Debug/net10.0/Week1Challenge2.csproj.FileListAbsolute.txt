@@ -1,0 +1,4 @@
+C:\Users\jaeha\source\repos\Week1Challenge2\obj\Debug\net10.0\Week1Challenge2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\Week1Challenge2\obj\Debug\net10.0\Week1Challenge2.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\Week1Challenge2\obj\Debug\net10.0\Week1Challenge2.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\Week1Challenge2\obj\Debug\net10.0\Week1Challenge2.csproj.CoreCompileInputs.cache

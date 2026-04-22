@@ -1,0 +1,109 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jaeha\\source\\repos\\MicroProject1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9C57781E-1521-452C-9935-107BD97F445E}|MicroProject1.csproj|c:\\users\\jaeha\\source\\repos\\microproject1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C57781E-1521-452C-9935-107BD97F445E}|MicroProject1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C57781E-1521-452C-9935-107BD97F445E}|MicroProject1.csproj|c:\\users\\jaeha\\source\\repos\\microproject1\\models\\club.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C57781E-1521-452C-9935-107BD97F445E}|MicroProject1.csproj|solutionrelative:models\\club.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C57781E-1521-452C-9935-107BD97F445E}|MicroProject1.csproj|c:\\users\\jaeha\\source\\repos\\microproject1\\models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C57781E-1521-452C-9935-107BD97F445E}|MicroProject1.csproj|solutionrelative:models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C57781E-1521-452C-9935-107BD97F445E}|MicroProject1.csproj|c:\\users\\jaeha\\source\\repos\\microproject1\\models\\boardmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C57781E-1521-452C-9935-107BD97F445E}|MicroProject1.csproj|solutionrelative:models\\boardmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C57781E-1521-452C-9935-107BD97F445E}|MicroProject1.csproj|c:\\users\\jaeha\\source\\repos\\microproject1\\models\\regularmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C57781E-1521-452C-9935-107BD97F445E}|MicroProject1.csproj|solutionrelative:models\\regularmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BoardMember.cs",
+              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\MicroProject1\\Models\\BoardMember.cs",
+              "RelativeDocumentMoniker": "Models\\BoardMember.cs",
+              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\MicroProject1\\Models\\BoardMember.cs",
+              "RelativeToolTip": "Models\\BoardMember.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T22:06:44.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RegularMember.cs",
+              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\MicroProject1\\Models\\RegularMember.cs",
+              "RelativeDocumentMoniker": "Models\\RegularMember.cs",
+              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\MicroProject1\\Models\\RegularMember.cs",
+              "RelativeToolTip": "Models\\RegularMember.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T22:06:08.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Member.cs",
+              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\MicroProject1\\Models\\Member.cs",
+              "RelativeDocumentMoniker": "Models\\Member.cs",
+              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\MicroProject1\\Models\\Member.cs",
+              "RelativeToolTip": "Models\\Member.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T21:54:40.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Club.cs",
+              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\MicroProject1\\Models\\Club.cs",
+              "RelativeDocumentMoniker": "Models\\Club.cs",
+              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\MicroProject1\\Models\\Club.cs",
+              "RelativeToolTip": "Models\\Club.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAADwAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T20:51:09.306Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\MicroProject1\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\MicroProject1\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T20:49:19.339Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

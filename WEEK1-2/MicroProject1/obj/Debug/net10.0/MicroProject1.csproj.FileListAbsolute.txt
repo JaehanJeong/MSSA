@@ -1,0 +1,14 @@
+C:\Users\jaeha\source\repos\MicroProject1\bin\Debug\net10.0\MicroProject1.exe
+C:\Users\jaeha\source\repos\MicroProject1\bin\Debug\net10.0\MicroProject1.deps.json
+C:\Users\jaeha\source\repos\MicroProject1\bin\Debug\net10.0\MicroProject1.runtimeconfig.json
+C:\Users\jaeha\source\repos\MicroProject1\bin\Debug\net10.0\MicroProject1.dll
+C:\Users\jaeha\source\repos\MicroProject1\bin\Debug\net10.0\MicroProject1.pdb
+C:\Users\jaeha\source\repos\MicroProject1\obj\Debug\net10.0\MicroProject1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\MicroProject1\obj\Debug\net10.0\MicroProject1.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\MicroProject1\obj\Debug\net10.0\MicroProject1.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\MicroProject1\obj\Debug\net10.0\MicroProject1.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\MicroProject1\obj\Debug\net10.0\MicroProject1.dll
+C:\Users\jaeha\source\repos\MicroProject1\obj\Debug\net10.0\refint\MicroProject1.dll
+C:\Users\jaeha\source\repos\MicroProject1\obj\Debug\net10.0\MicroProject1.pdb
+C:\Users\jaeha\source\repos\MicroProject1\obj\Debug\net10.0\MicroProject1.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\MicroProject1\obj\Debug\net10.0\ref\MicroProject1.dll

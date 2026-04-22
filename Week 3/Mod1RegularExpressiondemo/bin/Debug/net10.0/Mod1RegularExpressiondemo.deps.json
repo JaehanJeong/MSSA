@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Mod1RegularExpressiondemo/1.0.0": {
+        "runtime": {
+          "Mod1RegularExpressiondemo.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Mod1RegularExpressiondemo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

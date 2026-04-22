@@ -1,0 +1,14 @@
+C:\Users\jaeha\source\repos\FileIOWarmUp\bin\Debug\net10.0\FileIOWarmUp.exe
+C:\Users\jaeha\source\repos\FileIOWarmUp\bin\Debug\net10.0\FileIOWarmUp.deps.json
+C:\Users\jaeha\source\repos\FileIOWarmUp\bin\Debug\net10.0\FileIOWarmUp.runtimeconfig.json
+C:\Users\jaeha\source\repos\FileIOWarmUp\bin\Debug\net10.0\FileIOWarmUp.dll
+C:\Users\jaeha\source\repos\FileIOWarmUp\bin\Debug\net10.0\FileIOWarmUp.pdb
+C:\Users\jaeha\source\repos\FileIOWarmUp\obj\Debug\net10.0\FileIOWarmUp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\FileIOWarmUp\obj\Debug\net10.0\FileIOWarmUp.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\FileIOWarmUp\obj\Debug\net10.0\FileIOWarmUp.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\FileIOWarmUp\obj\Debug\net10.0\FileIOWarmUp.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\FileIOWarmUp\obj\Debug\net10.0\FileIOWarmUp.dll
+C:\Users\jaeha\source\repos\FileIOWarmUp\obj\Debug\net10.0\refint\FileIOWarmUp.dll
+C:\Users\jaeha\source\repos\FileIOWarmUp\obj\Debug\net10.0\FileIOWarmUp.pdb
+C:\Users\jaeha\source\repos\FileIOWarmUp\obj\Debug\net10.0\FileIOWarmUp.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\FileIOWarmUp\obj\Debug\net10.0\ref\FileIOWarmUp.dll

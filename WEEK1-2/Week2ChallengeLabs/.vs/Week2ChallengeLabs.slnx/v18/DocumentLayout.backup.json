@@ -1,0 +1,91 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jaeha\\source\\repos\\Week2ChallengeLabs\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C71064BB-BFEA-5F00-FB23-396C6A6DBDC7}|Week2ChallengeLabs.csproj|c:\\users\\jaeha\\source\\repos\\week2challengelabs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C71064BB-BFEA-5F00-FB23-396C6A6DBDC7}|Week2ChallengeLabs.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jaeha\\source\\repos\\Assignment 2.3\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C71064BB-BFEA-5F00-FB23-396C6A6DBDC7}|Week2ChallengeLabs.csproj|c:\\users\\jaeha\\source\\repos\\week2challengelabs\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C71064BB-BFEA-5F00-FB23-396C6A6DBDC7}|Week2ChallengeLabs.csproj|solutionrelative:models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C71064BB-BFEA-5F00-FB23-396C6A6DBDC7}|Week2ChallengeLabs.csproj|c:\\users\\jaeha\\source\\repos\\week2challengelabs\\models\\subjectgrade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C71064BB-BFEA-5F00-FB23-396C6A6DBDC7}|Week2ChallengeLabs.csproj|solutionrelative:models\\subjectgrade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\Assignment 2.3\\Program.cs",
+              "RelativeDocumentMoniker": "..\\Assignment 2.3\\Program.cs",
+              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\Assignment 2.3\\Program.cs",
+              "RelativeToolTip": "..\\Assignment 2.3\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T21:41:04.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\Week2ChallengeLabs\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\Week2ChallengeLabs\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAAAHQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T23:39:30.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\Week2ChallengeLabs\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "Models\\Student.cs",
+              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\Week2ChallengeLabs\\Models\\Student.cs",
+              "RelativeToolTip": "Models\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T21:16:48.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SubjectGrade.cs",
+              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\Week2ChallengeLabs\\Models\\SubjectGrade.cs",
+              "RelativeDocumentMoniker": "Models\\SubjectGrade.cs",
+              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\Week2ChallengeLabs\\Models\\SubjectGrade.cs",
+              "RelativeToolTip": "Models\\SubjectGrade.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-14T20:22:28.967Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
