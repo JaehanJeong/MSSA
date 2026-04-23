@@ -1,0 +1,15 @@
+C:\Users\jaeha\source\repos\MSSA\Week 3\Mod3IndexerDemo\bin\Debug\net10.0\Mod3IndexerDemo.exe
+C:\Users\jaeha\source\repos\MSSA\Week 3\Mod3IndexerDemo\bin\Debug\net10.0\Mod3IndexerDemo.deps.json
+C:\Users\jaeha\source\repos\MSSA\Week 3\Mod3IndexerDemo\bin\Debug\net10.0\Mod3IndexerDemo.runtimeconfig.json
+C:\Users\jaeha\source\repos\MSSA\Week 3\Mod3IndexerDemo\bin\Debug\net10.0\Mod3IndexerDemo.dll
+C:\Users\jaeha\source\repos\MSSA\Week 3\Mod3IndexerDemo\bin\Debug\net10.0\Mod3IndexerDemo.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 3\Mod3IndexerDemo\obj\Debug\net10.0\Mod3IndexerDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\MSSA\Week 3\Mod3IndexerDemo\obj\Debug\net10.0\Mod3IndexerDemo.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 3\Mod3IndexerDemo\obj\Debug\net10.0\Mod3IndexerDemo.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\MSSA\Week 3\Mod3IndexerDemo\obj\Debug\net10.0\Mod3IndexerDemo.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 3\Mod3IndexerDemo\obj\Debug\net10.0\Mod3IndexerDemo.sourcelink.json
+C:\Users\jaeha\source\repos\MSSA\Week 3\Mod3IndexerDemo\obj\Debug\net10.0\Mod3IndexerDemo.dll
+C:\Users\jaeha\source\repos\MSSA\Week 3\Mod3IndexerDemo\obj\Debug\net10.0\refint\Mod3IndexerDemo.dll
+C:\Users\jaeha\source\repos\MSSA\Week 3\Mod3IndexerDemo\obj\Debug\net10.0\Mod3IndexerDemo.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 3\Mod3IndexerDemo\obj\Debug\net10.0\Mod3IndexerDemo.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\MSSA\Week 3\Mod3IndexerDemo\obj\Debug\net10.0\ref\Mod3IndexerDemo.dll

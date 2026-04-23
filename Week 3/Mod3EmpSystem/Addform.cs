@@ -40,7 +40,8 @@ namespace Mod3EmpSystem
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if (txtName.Text != string.Empty)
-            {
+                //if (txtName.Text != string.Empty && txtFirstName.text != string.Empty)
+            {// Need it for all the properties 
                 Employee newemp = new Employee();
                 newemp.EmployeeID = int.Parse(txtEmpId.Text);
                 newemp.Name = txtName.Text;

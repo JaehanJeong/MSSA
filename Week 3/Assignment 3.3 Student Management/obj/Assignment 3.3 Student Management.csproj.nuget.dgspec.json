@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jaeha\\source\\repos\\Week 3\\Assignment 3.3 Student Management\\Assignment 3.3 Student Management.csproj": {}
+    "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 3\\Assignment 3.3 Student Management\\Assignment 3.3 Student Management.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jaeha\\source\\repos\\Week 3\\Assignment 3.3 Student Management\\Assignment 3.3 Student Management.csproj": {
+    "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 3\\Assignment 3.3 Student Management\\Assignment 3.3 Student Management.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jaeha\\source\\repos\\Week 3\\Assignment 3.3 Student Management\\Assignment 3.3 Student Management.csproj",
+        "projectUniqueName": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 3\\Assignment 3.3 Student Management\\Assignment 3.3 Student Management.csproj",
         "projectName": "Assignment 3.3 Student Management",
-        "projectPath": "C:\\Users\\jaeha\\source\\repos\\Week 3\\Assignment 3.3 Student Management\\Assignment 3.3 Student Management.csproj",
+        "projectPath": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 3\\Assignment 3.3 Student Management\\Assignment 3.3 Student Management.csproj",
         "packagesPath": "C:\\Users\\jaeha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jaeha\\source\\repos\\Week 3\\Assignment 3.3 Student Management\\obj\\",
+        "outputPath": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 3\\Assignment 3.3 Student Management\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

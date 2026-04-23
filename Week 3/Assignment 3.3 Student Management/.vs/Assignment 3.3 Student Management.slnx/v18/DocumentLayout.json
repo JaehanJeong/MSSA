@@ -1,7 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\jaeha\\source\\repos\\Week 3\\Assignment 3.3 Student Management\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 3\\Assignment 3.3 Student Management\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F4B6A224-5C77-E349-2D56-B3766D42E186}|Assignment 3.3 Student Management.csproj|c:\\users\\jaeha\\source\\repos\\mssa\\week 3\\assignment 3.3 student management\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4B6A224-5C77-E349-2D56-B3766D42E186}|Assignment 3.3 Student Management.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +14,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 3\\Assignment 3.3 Student Management\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 3\\Assignment 3.3 Student Management\\MainForm.cs",
+              "RelativeToolTip": "MainForm.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAC8AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T20:46:01.176Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
