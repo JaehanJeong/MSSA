@@ -44,7 +44,7 @@ namespace Assignment_3._3_Student_Management
                 newstudent.firstName = txtFirstName.Text;
                 newstudent.lastName = txtLastName.Text;
                 newstudent.address = txtAddress.Text;
-                newstudent.monthOfAdmission = (Month)(comboMonth.SelectedIndex);
+                newstudent.monthOfAdmission = (Month)(comboMonth.SelectedIndex+1);
                 char c;
                 if (char.TryParse(txtGrade.Text, out c))
                 {

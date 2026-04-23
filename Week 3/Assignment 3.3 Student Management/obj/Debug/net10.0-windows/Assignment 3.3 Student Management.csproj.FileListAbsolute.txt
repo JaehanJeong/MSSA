@@ -16,3 +16,22 @@ C:\Users\jaeha\source\repos\Week 3\Assignment 3.3 Student Management\obj\Debug\n
 C:\Users\jaeha\source\repos\Week 3\Assignment 3.3 Student Management\obj\Debug\net10.0-windows\Assignment 3.3 Student Management.pdb
 C:\Users\jaeha\source\repos\Week 3\Assignment 3.3 Student Management\obj\Debug\net10.0-windows\Assignment 3.3 Student Management.genruntimeconfig.cache
 C:\Users\jaeha\source\repos\Week 3\Assignment 3.3 Student Management\obj\Debug\net10.0-windows\ref\Assignment 3.3 Student Management.dll
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.3 Student Management\bin\Debug\net10.0-windows\Assignment 3.3 Student Management.exe
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.3 Student Management\bin\Debug\net10.0-windows\Assignment 3.3 Student Management.deps.json
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.3 Student Management\bin\Debug\net10.0-windows\Assignment 3.3 Student Management.runtimeconfig.json
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.3 Student Management\bin\Debug\net10.0-windows\Assignment 3.3 Student Management.dll
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.3 Student Management\bin\Debug\net10.0-windows\Assignment 3.3 Student Management.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.3 Student Management\obj\Debug\net10.0-windows\Assignment_3._3_Student_Management.Addform.resources
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.3 Student Management\obj\Debug\net10.0-windows\Assignment_3._3_Student_Management.Form1.resources
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.3 Student Management\obj\Debug\net10.0-windows\Assignment_3._3_Student_Management.MainForm.resources
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.3 Student Management\obj\Debug\net10.0-windows\Assignment 3.3 Student Management.csproj.GenerateResource.cache
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.3 Student Management\obj\Debug\net10.0-windows\Assignment 3.3 Student Management.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.3 Student Management\obj\Debug\net10.0-windows\Assignment 3.3 Student Management.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.3 Student Management\obj\Debug\net10.0-windows\Assignment 3.3 Student Management.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.3 Student Management\obj\Debug\net10.0-windows\Assignment 3.3 Student Management.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.3 Student Management\obj\Debug\net10.0-windows\Assignment 3.3 Student Management.sourcelink.json
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.3 Student Management\obj\Debug\net10.0-windows\Assignment 3.3 Student Management.dll
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.3 Student Management\obj\Debug\net10.0-windows\refint\Assignment 3.3 Student Management.dll
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.3 Student Management\obj\Debug\net10.0-windows\Assignment 3.3 Student Management.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.3 Student Management\obj\Debug\net10.0-windows\Assignment 3.3 Student Management.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.3 Student Management\obj\Debug\net10.0-windows\ref\Assignment 3.3 Student Management.dll

@@ -17,7 +17,7 @@ namespace Mod3EmpSystem
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            empGrid.DataSource = Data.Employees;
+            empGrid.DataSource = Data.Employees; //Connecting the physical graph with Data class's list.
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

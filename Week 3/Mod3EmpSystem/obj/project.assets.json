@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jaeha\\source\\repos\\Week 3\\Mod3EmpSystem\\Mod3EmpSystem.csproj",
+      "projectUniqueName": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 3\\Mod3EmpSystem\\Mod3EmpSystem.csproj",
       "projectName": "Mod3EmpSystem",
-      "projectPath": "C:\\Users\\jaeha\\source\\repos\\Week 3\\Mod3EmpSystem\\Mod3EmpSystem.csproj",
+      "projectPath": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 3\\Mod3EmpSystem\\Mod3EmpSystem.csproj",
       "packagesPath": "C:\\Users\\jaeha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jaeha\\source\\repos\\Week 3\\Mod3EmpSystem\\obj\\",
+      "outputPath": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 3\\Mod3EmpSystem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

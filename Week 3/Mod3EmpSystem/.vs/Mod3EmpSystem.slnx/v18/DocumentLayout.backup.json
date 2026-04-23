@@ -1,22 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\jaeha\\source\\repos\\Week 3\\Mod3EmpSystem\\",
+  "WorkspaceRootPath": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 3\\Mod3EmpSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{73DC9DA0-99D5-9B1D-0808-BFEE8FD662CF}|Mod3EmpSystem.csproj|c:\\users\\jaeha\\source\\repos\\week 3\\mod3empsystem\\addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{73DC9DA0-99D5-9B1D-0808-BFEE8FD662CF}|Mod3EmpSystem.csproj|solutionrelative:addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73DC9DA0-99D5-9B1D-0808-BFEE8FD662CF}|Mod3EmpSystem.csproj|c:\\users\\jaeha\\source\\repos\\week 3\\mod3empsystem\\addform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73DC9DA0-99D5-9B1D-0808-BFEE8FD662CF}|Mod3EmpSystem.csproj|solutionrelative:addform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73DC9DA0-99D5-9B1D-0808-BFEE8FD662CF}|Mod3EmpSystem.csproj|c:\\users\\jaeha\\source\\repos\\week 3\\mod3empsystem\\addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73DC9DA0-99D5-9B1D-0808-BFEE8FD662CF}|Mod3EmpSystem.csproj|solutionrelative:addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73DC9DA0-99D5-9B1D-0808-BFEE8FD662CF}|Mod3EmpSystem.csproj|c:\\users\\jaeha\\source\\repos\\week 3\\mod3empsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73DC9DA0-99D5-9B1D-0808-BFEE8FD662CF}|Mod3EmpSystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{73DC9DA0-99D5-9B1D-0808-BFEE8FD662CF}|Mod3EmpSystem.csproj|c:\\users\\jaeha\\source\\repos\\mssa\\week 3\\mod3empsystem\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{73DC9DA0-99D5-9B1D-0808-BFEE8FD662CF}|Mod3EmpSystem.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,52 +22,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Addform.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\Week 3\\Mod3EmpSystem\\Addform.Designer.cs",
-              "RelativeDocumentMoniker": "Addform.Designer.cs",
-              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\Week 3\\Mod3EmpSystem\\Addform.Designer.cs",
-              "RelativeToolTip": "Addform.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T21:15:45.691Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Addform.cs",
-              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\Week 3\\Mod3EmpSystem\\Addform.cs",
-              "RelativeDocumentMoniker": "Addform.cs",
-              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\Week 3\\Mod3EmpSystem\\Addform.cs",
-              "RelativeToolTip": "Addform.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAqwAwAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T21:15:02.946Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\Week 3\\Mod3EmpSystem\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\Week 3\\Mod3EmpSystem\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T21:05:55.885Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Addform.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\Week 3\\Mod3EmpSystem\\Addform.cs",
-              "RelativeDocumentMoniker": "Addform.cs",
-              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\Week 3\\Mod3EmpSystem\\Addform.cs [Design]",
-              "RelativeToolTip": "Addform.cs [Design]",
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 3\\Mod3EmpSystem\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 3\\Mod3EmpSystem\\MainForm.cs [Design]",
+              "RelativeToolTip": "MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-22T21:15:54.529Z",
+              "WhenOpened": "2026-04-23T01:01:58.341Z",
               "EditorCaption": " [Design]"
             },
             {

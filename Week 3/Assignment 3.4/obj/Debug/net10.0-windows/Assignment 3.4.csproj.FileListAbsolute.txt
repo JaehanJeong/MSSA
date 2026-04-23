@@ -1,0 +1,19 @@
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.4\obj\Debug\net10.0-windows\Assignment_3._4.Addform.resources
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.4\obj\Debug\net10.0-windows\Assignment_3._4.MainForm.resources
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.4\obj\Debug\net10.0-windows\Assignment 3.4.csproj.GenerateResource.cache
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.4\obj\Debug\net10.0-windows\Assignment 3.4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.4\obj\Debug\net10.0-windows\Assignment 3.4.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.4\obj\Debug\net10.0-windows\Assignment 3.4.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.4\obj\Debug\net10.0-windows\Assignment 3.4.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.4\obj\Debug\net10.0-windows\Assignment 3.4.sourcelink.json
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.4\bin\Debug\net10.0-windows\Assignment 3.4.exe
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.4\bin\Debug\net10.0-windows\Assignment 3.4.deps.json
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.4\bin\Debug\net10.0-windows\Assignment 3.4.runtimeconfig.json
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.4\bin\Debug\net10.0-windows\Assignment 3.4.dll
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.4\bin\Debug\net10.0-windows\Assignment 3.4.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.4\obj\Debug\net10.0-windows\Assignment 3.4.dll
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.4\obj\Debug\net10.0-windows\refint\Assignment 3.4.dll
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.4\obj\Debug\net10.0-windows\Assignment 3.4.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.4\obj\Debug\net10.0-windows\Assignment 3.4.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.4\obj\Debug\net10.0-windows\ref\Assignment 3.4.dll
+C:\Users\jaeha\source\repos\MSSA\Week 3\Assignment 3.4\obj\Debug\net10.0-windows\Assignment_3._4.Properties.Resources.resources
