@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Week 3 Challenge Assignments/1.0.0": {
+        "runtime": {
+          "Week 3 Challenge Assignments.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Week 3 Challenge Assignments/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
