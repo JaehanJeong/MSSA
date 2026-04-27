@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 3\\Assignment 3.3 Student Management\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F4B6A224-5C77-E349-2D56-B3766D42E186}|Assignment 3.3 Student Management.csproj|c:\\users\\jaeha\\source\\repos\\mssa\\week 3\\assignment 3.3 student management\\addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F4B6A224-5C77-E349-2D56-B3766D42E186}|Assignment 3.3 Student Management.csproj|solutionrelative:addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F4B6A224-5C77-E349-2D56-B3766D42E186}|Assignment 3.3 Student Management.csproj|c:\\users\\jaeha\\source\\repos\\mssa\\week 3\\assignment 3.3 student management\\addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F4B6A224-5C77-E349-2D56-B3766D42E186}|Assignment 3.3 Student Management.csproj|solutionrelative:addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{F4B6A224-5C77-E349-2D56-B3766D42E186}|Assignment 3.3 Student Management.csproj|c:\\users\\jaeha\\source\\repos\\mssa\\week 3\\assignment 3.3 student management\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4B6A224-5C77-E349-2D56-B3766D42E186}|Assignment 3.3 Student Management.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,27 +23,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Addform.cs",
-              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 3\\Assignment 3.3 Student Management\\Addform.cs",
-              "RelativeDocumentMoniker": "Addform.cs",
-              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 3\\Assignment 3.3 Student Management\\Addform.cs",
-              "RelativeToolTip": "Addform.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAABSAAAAAAAAAA==",
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 3\\Assignment 3.3 Student Management\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 3\\Assignment 3.3 Student Management\\MainForm.cs",
+              "RelativeToolTip": "MainForm.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAwwC8AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T00:15:47.864Z",
+              "WhenOpened": "2026-04-23T20:46:01.176Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Addform.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 3\\Assignment 3.3 Student Management\\Addform.cs",
-              "RelativeDocumentMoniker": "Addform.cs",
-              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 3\\Assignment 3.3 Student Management\\Addform.cs [Design]",
-              "RelativeToolTip": "Addform.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T00:12:33.927Z",
-              "EditorCaption": " [Design]"
             },
             {
               "$type": "Bookmark",

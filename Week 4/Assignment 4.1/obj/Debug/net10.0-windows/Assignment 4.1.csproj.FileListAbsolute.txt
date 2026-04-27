@@ -1,0 +1,18 @@
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.1\bin\Debug\net10.0-windows\Assignment 4.1.exe
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.1\bin\Debug\net10.0-windows\Assignment 4.1.deps.json
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.1\bin\Debug\net10.0-windows\Assignment 4.1.runtimeconfig.json
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.1\bin\Debug\net10.0-windows\Assignment 4.1.dll
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.1\bin\Debug\net10.0-windows\Assignment 4.1.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.1\obj\Debug\net10.0-windows\Assignment_4._1.Addform.resources
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.1\obj\Debug\net10.0-windows\Assignment_4._1.MainForm.resources
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.1\obj\Debug\net10.0-windows\Assignment 4.1.csproj.GenerateResource.cache
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.1\obj\Debug\net10.0-windows\Assignment 4.1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.1\obj\Debug\net10.0-windows\Assignment 4.1.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.1\obj\Debug\net10.0-windows\Assignment 4.1.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.1\obj\Debug\net10.0-windows\Assignment 4.1.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.1\obj\Debug\net10.0-windows\Assignment 4.1.sourcelink.json
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.1\obj\Debug\net10.0-windows\Assignment 4.1.dll
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.1\obj\Debug\net10.0-windows\refint\Assignment 4.1.dll
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.1\obj\Debug\net10.0-windows\Assignment 4.1.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.1\obj\Debug\net10.0-windows\Assignment 4.1.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.1\obj\Debug\net10.0-windows\ref\Assignment 4.1.dll
