@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 4\\Assignment 4.1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3C6A964C-06EB-69C9-9C8A-0688EB7C47C6}|Assignment 4.1.csproj|c:\\users\\jaeha\\source\\repos\\mssa\\week 4\\assignment 4.1\\addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C6A964C-06EB-69C9-9C8A-0688EB7C47C6}|Assignment 4.1.csproj|solutionrelative:addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C6A964C-06EB-69C9-9C8A-0688EB7C47C6}|Assignment 4.1.csproj|c:\\users\\jaeha\\source\\repos\\mssa\\week 4\\assignment 4.1\\addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3C6A964C-06EB-69C9-9C8A-0688EB7C47C6}|Assignment 4.1.csproj|solutionrelative:addform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{3C6A964C-06EB-69C9-9C8A-0688EB7C47C6}|Assignment 4.1.csproj|c:\\users\\jaeha\\source\\repos\\mssa\\week 4\\assignment 4.1\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C6A964C-06EB-69C9-9C8A-0688EB7C47C6}|Assignment 4.1.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,27 +23,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Addform.cs",
-              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 4\\Assignment 4.1\\Addform.cs",
-              "RelativeDocumentMoniker": "Addform.cs",
-              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 4\\Assignment 4.1\\Addform.cs",
-              "RelativeToolTip": "Addform.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBUAAAAAAAAAAAAAAA==",
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 4\\Assignment 4.1\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 4\\Assignment 4.1\\MainForm.cs",
+              "RelativeToolTip": "MainForm.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwAIAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T21:57:45.938Z",
+              "WhenOpened": "2026-04-29T00:51:07.961Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Addform.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 4\\Assignment 4.1\\Addform.cs",
-              "RelativeDocumentMoniker": "Addform.cs",
-              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 4\\Assignment 4.1\\Addform.cs [Design]",
-              "RelativeToolTip": "Addform.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-28T21:57:29.791Z",
-              "EditorCaption": " [Design]"
             },
             {
               "$type": "Bookmark",
