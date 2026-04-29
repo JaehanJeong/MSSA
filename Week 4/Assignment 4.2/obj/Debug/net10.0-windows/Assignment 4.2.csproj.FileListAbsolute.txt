@@ -1,0 +1,17 @@
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2\obj\Debug\net10.0-windows\Assignment_4._2.Calculator.resources
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2\obj\Debug\net10.0-windows\Assignment 4.2.csproj.GenerateResource.cache
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2\obj\Debug\net10.0-windows\Assignment 4.2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2\obj\Debug\net10.0-windows\Assignment 4.2.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2\obj\Debug\net10.0-windows\Assignment 4.2.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2\obj\Debug\net10.0-windows\Assignment 4.2.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2\obj\Debug\net10.0-windows\Assignment 4.2.sourcelink.json
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2\bin\Debug\net10.0-windows\Assignment 4.2.exe
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2\bin\Debug\net10.0-windows\Assignment 4.2.deps.json
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2\bin\Debug\net10.0-windows\Assignment 4.2.runtimeconfig.json
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2\bin\Debug\net10.0-windows\Assignment 4.2.dll
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2\bin\Debug\net10.0-windows\Assignment 4.2.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2\obj\Debug\net10.0-windows\Assignment 4.2.dll
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2\obj\Debug\net10.0-windows\refint\Assignment 4.2.dll
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2\obj\Debug\net10.0-windows\Assignment 4.2.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2\obj\Debug\net10.0-windows\Assignment 4.2.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2\obj\Debug\net10.0-windows\ref\Assignment 4.2.dll

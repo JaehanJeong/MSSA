@@ -1,0 +1,17 @@
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod3EventsDelegateDemo\bin\Debug\net10.0-windows\Mod3EventsDelegateDemo.exe
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod3EventsDelegateDemo\bin\Debug\net10.0-windows\Mod3EventsDelegateDemo.deps.json
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod3EventsDelegateDemo\bin\Debug\net10.0-windows\Mod3EventsDelegateDemo.runtimeconfig.json
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod3EventsDelegateDemo\bin\Debug\net10.0-windows\Mod3EventsDelegateDemo.dll
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod3EventsDelegateDemo\bin\Debug\net10.0-windows\Mod3EventsDelegateDemo.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod3EventsDelegateDemo\obj\Debug\net10.0-windows\Mod3EventsDelegateDemo.Form1.resources
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod3EventsDelegateDemo\obj\Debug\net10.0-windows\Mod3EventsDelegateDemo.csproj.GenerateResource.cache
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod3EventsDelegateDemo\obj\Debug\net10.0-windows\Mod3EventsDelegateDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod3EventsDelegateDemo\obj\Debug\net10.0-windows\Mod3EventsDelegateDemo.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod3EventsDelegateDemo\obj\Debug\net10.0-windows\Mod3EventsDelegateDemo.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod3EventsDelegateDemo\obj\Debug\net10.0-windows\Mod3EventsDelegateDemo.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod3EventsDelegateDemo\obj\Debug\net10.0-windows\Mod3EventsDelegateDemo.sourcelink.json
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod3EventsDelegateDemo\obj\Debug\net10.0-windows\Mod3EventsDelegateDemo.dll
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod3EventsDelegateDemo\obj\Debug\net10.0-windows\refint\Mod3EventsDelegateDemo.dll
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod3EventsDelegateDemo\obj\Debug\net10.0-windows\Mod3EventsDelegateDemo.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod3EventsDelegateDemo\obj\Debug\net10.0-windows\Mod3EventsDelegateDemo.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod3EventsDelegateDemo\obj\Debug\net10.0-windows\ref\Mod3EventsDelegateDemo.dll

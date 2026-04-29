@@ -1,0 +1,15 @@
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4GenericsDemo\bin\Debug\net10.0\Mod4GenericsDemo.exe
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4GenericsDemo\bin\Debug\net10.0\Mod4GenericsDemo.deps.json
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4GenericsDemo\bin\Debug\net10.0\Mod4GenericsDemo.runtimeconfig.json
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4GenericsDemo\bin\Debug\net10.0\Mod4GenericsDemo.dll
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4GenericsDemo\bin\Debug\net10.0\Mod4GenericsDemo.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4GenericsDemo\obj\Debug\net10.0\Mod4GenericsDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4GenericsDemo\obj\Debug\net10.0\Mod4GenericsDemo.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4GenericsDemo\obj\Debug\net10.0\Mod4GenericsDemo.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4GenericsDemo\obj\Debug\net10.0\Mod4GenericsDemo.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4GenericsDemo\obj\Debug\net10.0\Mod4GenericsDemo.sourcelink.json
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4GenericsDemo\obj\Debug\net10.0\Mod4GenericsDemo.dll
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4GenericsDemo\obj\Debug\net10.0\refint\Mod4GenericsDemo.dll
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4GenericsDemo\obj\Debug\net10.0\Mod4GenericsDemo.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4GenericsDemo\obj\Debug\net10.0\Mod4GenericsDemo.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4GenericsDemo\obj\Debug\net10.0\ref\Mod4GenericsDemo.dll
