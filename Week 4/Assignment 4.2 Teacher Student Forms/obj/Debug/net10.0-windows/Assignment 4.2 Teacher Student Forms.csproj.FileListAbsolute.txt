@@ -1,0 +1,19 @@
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2 Teacher Student Forms\bin\Debug\net10.0-windows\Assignment 4.2 Teacher Student Forms.exe
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2 Teacher Student Forms\bin\Debug\net10.0-windows\Assignment 4.2 Teacher Student Forms.deps.json
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2 Teacher Student Forms\bin\Debug\net10.0-windows\Assignment 4.2 Teacher Student Forms.runtimeconfig.json
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2 Teacher Student Forms\bin\Debug\net10.0-windows\Assignment 4.2 Teacher Student Forms.dll
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2 Teacher Student Forms\bin\Debug\net10.0-windows\Assignment 4.2 Teacher Student Forms.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2 Teacher Student Forms\obj\Debug\net10.0-windows\Assignment 4.2 Teacher Student Forms.csproj.GenerateResource.cache
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2 Teacher Student Forms\obj\Debug\net10.0-windows\Assignment 4.2 Teacher Student Forms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2 Teacher Student Forms\obj\Debug\net10.0-windows\Assignment 4.2 Teacher Student Forms.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2 Teacher Student Forms\obj\Debug\net10.0-windows\Assignment 4.2 Teacher Student Forms.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2 Teacher Student Forms\obj\Debug\net10.0-windows\Assignment 4.2 Teacher Student Forms.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2 Teacher Student Forms\obj\Debug\net10.0-windows\Assignment 4.2 Teacher Student Forms.sourcelink.json
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2 Teacher Student Forms\obj\Debug\net10.0-windows\Assignment 4.2 Teacher Student Forms.dll
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2 Teacher Student Forms\obj\Debug\net10.0-windows\refint\Assignment 4.2 Teacher Student Forms.dll
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2 Teacher Student Forms\obj\Debug\net10.0-windows\Assignment 4.2 Teacher Student Forms.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2 Teacher Student Forms\obj\Debug\net10.0-windows\Assignment 4.2 Teacher Student Forms.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2 Teacher Student Forms\obj\Debug\net10.0-windows\ref\Assignment 4.2 Teacher Student Forms.dll
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2 Teacher Student Forms\obj\Debug\net10.0-windows\Assignment_4._2_Teacher_Student_Forms.Addform.resources
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2 Teacher Student Forms\obj\Debug\net10.0-windows\Assignment_4._2_Teacher_Student_Forms.Teacher_Form.resources
+C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2 Teacher Student Forms\obj\Debug\net10.0-windows\Assignment_4._2_Teacher_Student_Forms.TeacherLogin.resources

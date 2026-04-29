@@ -1,6 +1,6 @@
-﻿namespace Assignment_4._2_Teacher_Student_Forms
+﻿namespace Assignment_4._2_Second_Attempt
 {
-    partial class Student_Form
+    partial class Teacher_Login
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Student_Form";
+            this.Text = "Teacher_Login";
         }
 
         #endregion

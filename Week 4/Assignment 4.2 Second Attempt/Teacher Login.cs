@@ -6,11 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Assignment_4._2_Teacher_Student_Forms
+namespace Assignment_4._2_Second_Attempt
 {
-    public partial class Student_Form : Form
+    public partial class Teacher_Login : Form
     {
-        public Student_Form()
+        public Teacher_Login()
         {
             InitializeComponent();
         }
