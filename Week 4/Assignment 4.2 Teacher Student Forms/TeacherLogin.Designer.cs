@@ -1,6 +1,6 @@
 ﻿namespace Assignment_4._2_Teacher_Student_Forms
 {
-    partial class Form1
+    partial class TeacherLogin
     {
         /// <summary>
         ///  Required designer variable.
@@ -57,6 +57,7 @@
             // 
             txtPassWord.Location = new Point(156, 140);
             txtPassWord.Name = "txtPassWord";
+            txtPassWord.PasswordChar = '*';
             txtPassWord.Size = new Size(100, 23);
             txtPassWord.TabIndex = 2;
             // 
@@ -87,7 +88,7 @@
             lblTitle.TabIndex = 5;
             lblTitle.Text = "Login Page";
             // 
-            // Form1
+            // TeacherLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -98,8 +99,9 @@
             Controls.Add(txtPassWord);
             Controls.Add(txtUserID);
             Controls.Add(btnLogin);
-            Name = "Form1";
+            Name = "TeacherLogin";
             Text = "Teacher Login";
+            Load += TeacherLogin_Load;
             ResumeLayout(false);
             PerformLayout();
         }

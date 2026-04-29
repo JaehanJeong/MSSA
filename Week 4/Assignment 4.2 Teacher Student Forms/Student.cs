@@ -7,8 +7,8 @@ namespace Assignment_4._2_Teacher_Student_Forms
     internal class Student : IComparable<Student>, IComparer<Student>
     {
 
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public int StudentId { get; set; }
+        public string StudentName { get; set; }
         public float GPA { get; set; }
         
         public int Compare(Student? x, Student? y)
@@ -18,7 +18,7 @@ namespace Assignment_4._2_Teacher_Student_Forms
 
         public int CompareTo(Student? other)
         {
-            int val = String.Compare(this.Name, other.Name, StringComparison.OrdinalIgnoreCase);
+            int val = String.Compare(this.StudentName, other.StudentName, StringComparison.OrdinalIgnoreCase);
             return val;
         }
     }

@@ -1,0 +1,61 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 4\\Assignment 4.2 Second Attempt\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C0D0A0-EB10-432F-B803-DA679BD122FF}|Assignment 4.2 Second Attempt.csproj|c:\\users\\jaeha\\source\\repos\\mssa\\week 4\\assignment 4.2 second attempt\\teacher login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C0D0A0-EB10-432F-B803-DA679BD122FF}|Assignment 4.2 Second Attempt.csproj|solutionrelative:teacher login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C0D0A0-EB10-432F-B803-DA679BD122FF}|Assignment 4.2 Second Attempt.csproj|c:\\users\\jaeha\\source\\repos\\mssa\\week 4\\assignment 4.2 second attempt\\teacher login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A6C0D0A0-EB10-432F-B803-DA679BD122FF}|Assignment 4.2 Second Attempt.csproj|solutionrelative:teacher login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Teacher Login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 4\\Assignment 4.2 Second Attempt\\Teacher Login.cs",
+              "RelativeDocumentMoniker": "Teacher Login.cs",
+              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 4\\Assignment 4.2 Second Attempt\\Teacher Login.cs [Design]",
+              "RelativeToolTip": "Teacher Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T22:14:09.13Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Teacher Login.cs",
+              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 4\\Assignment 4.2 Second Attempt\\Teacher Login.cs",
+              "RelativeDocumentMoniker": "Teacher Login.cs",
+              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 4\\Assignment 4.2 Second Attempt\\Teacher Login.cs",
+              "RelativeToolTip": "Teacher Login.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T22:14:20.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

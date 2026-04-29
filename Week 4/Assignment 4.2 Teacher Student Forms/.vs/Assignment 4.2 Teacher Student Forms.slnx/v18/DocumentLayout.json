@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 4\\Assignment 4.2 Teacher Student Forms\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{441D9A30-9B5E-4AA9-589F-1983F7880380}|Assignment 4.2 Teacher Student Forms.csproj|c:\\users\\jaeha\\source\\repos\\mssa\\week 4\\assignment 4.2 teacher student forms\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{441D9A30-9B5E-4AA9-589F-1983F7880380}|Assignment 4.2 Teacher Student Forms.csproj|solutionrelative:student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{441D9A30-9B5E-4AA9-589F-1983F7880380}|Assignment 4.2 Teacher Student Forms.csproj|c:\\users\\jaeha\\source\\repos\\mssa\\week 4\\assignment 4.2 teacher student forms\\teacherlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{441D9A30-9B5E-4AA9-589F-1983F7880380}|Assignment 4.2 Teacher Student Forms.csproj|solutionrelative:teacherlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,36 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Student.cs",
-              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 4\\Assignment 4.2 Teacher Student Forms\\Student.cs",
-              "RelativeDocumentMoniker": "Student.cs",
-              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 4\\Assignment 4.2 Teacher Student Forms\\Student.cs",
-              "RelativeToolTip": "Student.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-29T01:03:38.441Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TeacherLogin.cs",
-              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 4\\Assignment 4.2 Teacher Student Forms\\TeacherLogin.cs",
-              "RelativeDocumentMoniker": "TeacherLogin.cs",
-              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 4\\Assignment 4.2 Teacher Student Forms\\TeacherLogin.cs",
-              "RelativeToolTip": "TeacherLogin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-29T00:52:05.202Z"
             },
             {
               "$type": "Bookmark",
