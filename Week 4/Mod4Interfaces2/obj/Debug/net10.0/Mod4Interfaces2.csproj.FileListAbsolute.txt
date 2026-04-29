@@ -1,0 +1,15 @@
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4Interfaces2\obj\Debug\net10.0\Mod4Interfaces2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4Interfaces2\obj\Debug\net10.0\Mod4Interfaces2.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4Interfaces2\obj\Debug\net10.0\Mod4Interfaces2.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4Interfaces2\obj\Debug\net10.0\Mod4Interfaces2.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4Interfaces2\obj\Debug\net10.0\Mod4Interfaces2.sourcelink.json
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4Interfaces2\bin\Debug\net10.0\Mod4Interfaces2.exe
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4Interfaces2\bin\Debug\net10.0\Mod4Interfaces2.deps.json
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4Interfaces2\bin\Debug\net10.0\Mod4Interfaces2.runtimeconfig.json
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4Interfaces2\bin\Debug\net10.0\Mod4Interfaces2.dll
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4Interfaces2\bin\Debug\net10.0\Mod4Interfaces2.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4Interfaces2\obj\Debug\net10.0\Mod4Interfaces2.dll
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4Interfaces2\obj\Debug\net10.0\refint\Mod4Interfaces2.dll
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4Interfaces2\obj\Debug\net10.0\Mod4Interfaces2.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4Interfaces2\obj\Debug\net10.0\Mod4Interfaces2.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\MSSA\Week 4\Mod4Interfaces2\obj\Debug\net10.0\ref\Mod4Interfaces2.dll

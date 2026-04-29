@@ -31,8 +31,8 @@ namespace Assignment_4._1
                 Address = txtAddress.Text
             };
             string key = $"{newPerson.FirstName.Trim()} {newPerson.LastName.Trim()}";
-            Data.PersonDict.Add(key, newPerson);
-            Data.Persons.Add(newPerson);
+            Data.PersonDict.Add(key, newPerson); // add to dictionary
+            Data.Persons.Add(newPerson); // add to list
             MessageBox.Show("Contact added!");
             this.Close();
         }
