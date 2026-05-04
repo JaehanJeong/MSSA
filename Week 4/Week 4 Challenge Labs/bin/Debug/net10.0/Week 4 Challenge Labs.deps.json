@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Week 4 Challenge Labs/1.0.0": {
+        "runtime": {
+          "Week 4 Challenge Labs.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Week 4 Challenge Labs/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

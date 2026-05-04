@@ -1,0 +1,15 @@
+C:\Users\jaeha\source\repos\MSSA\Week 4\Week 4 Challenge Labs\bin\Debug\net10.0\Week 4 Challenge Labs.exe
+C:\Users\jaeha\source\repos\MSSA\Week 4\Week 4 Challenge Labs\bin\Debug\net10.0\Week 4 Challenge Labs.deps.json
+C:\Users\jaeha\source\repos\MSSA\Week 4\Week 4 Challenge Labs\bin\Debug\net10.0\Week 4 Challenge Labs.runtimeconfig.json
+C:\Users\jaeha\source\repos\MSSA\Week 4\Week 4 Challenge Labs\bin\Debug\net10.0\Week 4 Challenge Labs.dll
+C:\Users\jaeha\source\repos\MSSA\Week 4\Week 4 Challenge Labs\bin\Debug\net10.0\Week 4 Challenge Labs.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 4\Week 4 Challenge Labs\obj\Debug\net10.0\Week 4 Challenge Labs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\MSSA\Week 4\Week 4 Challenge Labs\obj\Debug\net10.0\Week 4 Challenge Labs.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 4\Week 4 Challenge Labs\obj\Debug\net10.0\Week 4 Challenge Labs.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\MSSA\Week 4\Week 4 Challenge Labs\obj\Debug\net10.0\Week 4 Challenge Labs.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 4\Week 4 Challenge Labs\obj\Debug\net10.0\Week 4 Challenge Labs.sourcelink.json
+C:\Users\jaeha\source\repos\MSSA\Week 4\Week 4 Challenge Labs\obj\Debug\net10.0\Week 4 Challenge Labs.dll
+C:\Users\jaeha\source\repos\MSSA\Week 4\Week 4 Challenge Labs\obj\Debug\net10.0\refint\Week 4 Challenge Labs.dll
+C:\Users\jaeha\source\repos\MSSA\Week 4\Week 4 Challenge Labs\obj\Debug\net10.0\Week 4 Challenge Labs.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 4\Week 4 Challenge Labs\obj\Debug\net10.0\Week 4 Challenge Labs.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\MSSA\Week 4\Week 4 Challenge Labs\obj\Debug\net10.0\ref\Week 4 Challenge Labs.dll
