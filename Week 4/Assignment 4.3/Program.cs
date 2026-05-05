@@ -119,10 +119,6 @@ void assignment4_3_2()
         {
             Console.WriteLine("Please enter a valid number.");
         }
-
-
-
-
     }
     Dictionary<int, int> frequency = new Dictionary<int, int>();
     foreach (int num in numbers)

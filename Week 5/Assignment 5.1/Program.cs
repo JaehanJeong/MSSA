@@ -60,6 +60,7 @@ int SumOfDigits()
         {
             return 0;
         }
+        //123.4
         int lastDigit = number % 10; // Current digit of the number we're working with
 
         // Get this digit and then call itself again without the last digit.
@@ -69,12 +70,13 @@ int SumOfDigits()
 SumOfDigits();
 #endregion
 
+#region Question#3
 // Question # 3
 // 3.Given an integer array nums,
 // return true if any value appears at least twice in the array,
 // and return false if every element is distinct.
 
-bool RepeatOrNot ()
+bool RepeatOrNot()
 {
     Console.WriteLine("Please enter the number you'd like to check for duplicates.Put a space between each number");
     string input = Console.ReadLine();
@@ -88,7 +90,7 @@ bool RepeatOrNot ()
         {
             return false;
         }
-        
+
         //if (dict.ContainsKey(number))
         //if (set.Contains(number))
         //{
@@ -100,14 +102,15 @@ bool RepeatOrNot ()
         //    set.Add(number);
         //}
         if (!set.Add(number)) // If adding the number failed
-            //Hash add is a bool function that will try to add
-            // and only add if there is no duplicate.
-            // So if it adds, then there was no duplicate.
-            // If it fails to add, thent here is a duplicate.
+                              //Hash add is a bool function that will try to add
+                              // and only add if there is no duplicate.
+                              // So if it adds, then there was no duplicate.
+                              // If it fails to add, thent here is a duplicate.
         {
             return true; // Means there was a duplicate so return true.
         }
-    }return false;
+    }
+    return false;
 }
 // LINQ One liner
 //bool hasDuplicates = nums.Distinct().Count() != nums.Length;
@@ -116,5 +119,6 @@ bool RepeatOrNot ()
 // nums.Length means how many items are in the original array
 // If the length is different, after removing duplicates, that means duplicates exist.
 
-RepeatOrNot ();
+RepeatOrNot(); 
+#endregion
 
