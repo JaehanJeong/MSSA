@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mod2Recursion3")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b0fe47affdc0523b6fc4792b0acf942503e97f57")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6cb677b3bb4de3f8b0bdd6b99fec384d27dd2de7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mod2Recursion3")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mod2Recursion3")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
