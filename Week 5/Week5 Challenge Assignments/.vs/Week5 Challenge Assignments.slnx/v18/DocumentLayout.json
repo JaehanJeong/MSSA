@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 5\\Assignment 5.4\\",
+  "WorkspaceRootPath": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 5\\Week5 Challenge Assignments\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D460DE47-C7F4-DB69-54A0-2F67C4D04999}|Assignment 5.4.csproj|c:\\users\\jaeha\\source\\repos\\mssa\\week 5\\assignment 5.4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D460DE47-C7F4-DB69-54A0-2F67C4D04999}|Assignment 5.4.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{15291887-9DF5-2695-A6B1-040004B8DD25}|Week5 Challenge Assignments.csproj|c:\\users\\jaeha\\source\\repos\\mssa\\week 5\\week5 challenge assignments\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15291887-9DF5-2695-A6B1-040004B8DD25}|Week5 Challenge Assignments.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,13 +24,13 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 5\\Assignment 5.4\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 5\\Week5 Challenge Assignments\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 5\\Assignment 5.4\\Program.cs",
+              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 5\\Week5 Challenge Assignments\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAQwBEAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAADsAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T20:06:17.567Z",
+              "WhenOpened": "2026-05-07T22:00:24.764Z",
               "EditorCaption": ""
             },
             {
