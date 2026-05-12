@@ -1,0 +1,15 @@
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Moving Zeroes\bin\Debug\net10.0\Moving Zeroes.exe
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Moving Zeroes\bin\Debug\net10.0\Moving Zeroes.deps.json
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Moving Zeroes\bin\Debug\net10.0\Moving Zeroes.runtimeconfig.json
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Moving Zeroes\bin\Debug\net10.0\Moving Zeroes.dll
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Moving Zeroes\bin\Debug\net10.0\Moving Zeroes.pdb
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Moving Zeroes\obj\Debug\net10.0\Moving Zeroes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Moving Zeroes\obj\Debug\net10.0\Moving Zeroes.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Moving Zeroes\obj\Debug\net10.0\Moving Zeroes.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Moving Zeroes\obj\Debug\net10.0\Moving Zeroes.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Moving Zeroes\obj\Debug\net10.0\Moving Zeroes.sourcelink.json
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Moving Zeroes\obj\Debug\net10.0\Moving Zeroes.dll
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Moving Zeroes\obj\Debug\net10.0\refint\Moving Zeroes.dll
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Moving Zeroes\obj\Debug\net10.0\Moving Zeroes.pdb
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Moving Zeroes\obj\Debug\net10.0\Moving Zeroes.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Moving Zeroes\obj\Debug\net10.0\ref\Moving Zeroes.dll

@@ -52,7 +52,7 @@ foreach (var pair in count)
 
 Console.WriteLine("*****************NEXT QUESTION *****************");
 //Set up a hypothetical range array.
-int[] givenRange = {0, 1, 2, 4, 5};
+int[] givenRange = {9, 6, 4, 2, 3, 5, 7, 0, 1};
 
 //First attempt - Fails cuz once an element goes missing, everything after falls apart too.
 //Loop thru the range

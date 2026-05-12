@@ -1,0 +1,15 @@
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod4LinkedListDemo\bin\Debug\net10.0\Mod4LinkedListDemo.exe
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod4LinkedListDemo\bin\Debug\net10.0\Mod4LinkedListDemo.deps.json
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod4LinkedListDemo\bin\Debug\net10.0\Mod4LinkedListDemo.runtimeconfig.json
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod4LinkedListDemo\bin\Debug\net10.0\Mod4LinkedListDemo.dll
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod4LinkedListDemo\bin\Debug\net10.0\Mod4LinkedListDemo.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod4LinkedListDemo\obj\Debug\net10.0\Mod4LinkedListDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod4LinkedListDemo\obj\Debug\net10.0\Mod4LinkedListDemo.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod4LinkedListDemo\obj\Debug\net10.0\Mod4LinkedListDemo.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod4LinkedListDemo\obj\Debug\net10.0\Mod4LinkedListDemo.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod4LinkedListDemo\obj\Debug\net10.0\Mod4LinkedListDemo.sourcelink.json
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod4LinkedListDemo\obj\Debug\net10.0\Mod4LinkedListDemo.dll
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod4LinkedListDemo\obj\Debug\net10.0\refint\Mod4LinkedListDemo.dll
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod4LinkedListDemo\obj\Debug\net10.0\Mod4LinkedListDemo.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod4LinkedListDemo\obj\Debug\net10.0\Mod4LinkedListDemo.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod4LinkedListDemo\obj\Debug\net10.0\ref\Mod4LinkedListDemo.dll
