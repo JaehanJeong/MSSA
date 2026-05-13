@@ -1,0 +1,15 @@
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackLLDemo\bin\Debug\net10.0\Mod5StackLLDemo.exe
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackLLDemo\bin\Debug\net10.0\Mod5StackLLDemo.deps.json
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackLLDemo\bin\Debug\net10.0\Mod5StackLLDemo.runtimeconfig.json
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackLLDemo\bin\Debug\net10.0\Mod5StackLLDemo.dll
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackLLDemo\bin\Debug\net10.0\Mod5StackLLDemo.pdb
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackLLDemo\obj\Debug\net10.0\Mod5StackLLDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackLLDemo\obj\Debug\net10.0\Mod5StackLLDemo.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackLLDemo\obj\Debug\net10.0\Mod5StackLLDemo.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackLLDemo\obj\Debug\net10.0\Mod5StackLLDemo.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackLLDemo\obj\Debug\net10.0\Mod5StackLLDemo.sourcelink.json
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackLLDemo\obj\Debug\net10.0\Mod5StackLLDemo.dll
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackLLDemo\obj\Debug\net10.0\refint\Mod5StackLLDemo.dll
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackLLDemo\obj\Debug\net10.0\Mod5StackLLDemo.pdb
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackLLDemo\obj\Debug\net10.0\Mod5StackLLDemo.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackLLDemo\obj\Debug\net10.0\ref\Mod5StackLLDemo.dll

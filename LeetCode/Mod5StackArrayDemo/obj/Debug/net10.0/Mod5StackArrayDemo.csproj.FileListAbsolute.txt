@@ -1,0 +1,15 @@
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackArrayDemo\bin\Debug\net10.0\Mod5StackArrayDemo.exe
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackArrayDemo\bin\Debug\net10.0\Mod5StackArrayDemo.deps.json
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackArrayDemo\bin\Debug\net10.0\Mod5StackArrayDemo.runtimeconfig.json
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackArrayDemo\bin\Debug\net10.0\Mod5StackArrayDemo.dll
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackArrayDemo\bin\Debug\net10.0\Mod5StackArrayDemo.pdb
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackArrayDemo\obj\Debug\net10.0\Mod5StackArrayDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackArrayDemo\obj\Debug\net10.0\Mod5StackArrayDemo.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackArrayDemo\obj\Debug\net10.0\Mod5StackArrayDemo.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackArrayDemo\obj\Debug\net10.0\Mod5StackArrayDemo.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackArrayDemo\obj\Debug\net10.0\Mod5StackArrayDemo.sourcelink.json
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackArrayDemo\obj\Debug\net10.0\Mod5StackArrayDemo.dll
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackArrayDemo\obj\Debug\net10.0\refint\Mod5StackArrayDemo.dll
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackArrayDemo\obj\Debug\net10.0\Mod5StackArrayDemo.pdb
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackArrayDemo\obj\Debug\net10.0\Mod5StackArrayDemo.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\MSSA\LeetCode\Mod5StackArrayDemo\obj\Debug\net10.0\ref\Mod5StackArrayDemo.dll

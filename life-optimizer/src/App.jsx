@@ -2,18 +2,18 @@ import { useState } from 'react';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import StatsChart from './StatsChart';
 
-// --- GAMIFICATION CONSTANTS ---
 const RARITY_SETTINGS = {
   Common: { color: '#888', xp: 5 },
   Rare: { color: '#646cff', xp: 15 },
   Epic: { color: '#a335ee', xp: 50 },
   Legendary: { color: '#ff8000', xp: 150 },
-  Mythic: { color: '#ff3e3e', xp: 1000 }, // For massive feats like Marathons
+  Mythic: { color: '#ff3e3e', xp: 1000 },
 };
 
 function App() {
   const location = useLocation();
 
+  // Initial stats based on your core attributes
   const [stats, setStats] = useState([
     { subject: 'Focus', A: 120, weight: 1.0 },
     { subject: 'Stamina', A: 98, weight: 0.1 },
@@ -24,7 +24,6 @@ function App() {
   ]);
 
   const [questCapacity, setQuestCapacity] = useState(3);
-
   const [masterQuestPool, setMasterQuestPool] = useState([
     { id: 1, title: "C# Dictionary Practice", stat: "Intelligence", rarity: "Rare" },
     { id: 2, title: "15 Min Vibrato Exercise", stat: "Violin", rarity: "Common" },
@@ -40,24 +39,31 @@ function App() {
           <Route path="/" element={
             <div>
               <h2 style={{ borderBottom: '1px solid #444', paddingBottom: '10px' }}>Current Build</h2>
-              <StatsChart key={JSON.stringify(stats)} stats={stats} /> 
+              {/* The key here ensures the chart re-draws when stats change */}
+              <StatsChart key={JSON.stringify(stats)} stats={stats}
+                PolarRadiusAxis
+                angle={90}
+                domain={[0, 200]} // This ensures 200 is the outer edge
+                tick={false}
+                axisLine={false}
+              />
             </div>
           } />
-          
+
           <Route path="/quests" element={
-            <QuestPage 
-              stats={stats} 
-              masterQuestPool={masterQuestPool} 
-              setMasterQuestPool={setMasterQuestPool} 
+            <QuestPage
+              stats={stats}
+              masterQuestPool={masterQuestPool}
+              setMasterQuestPool={setMasterQuestPool}
             />
           } />
 
           <Route path="/settings" element={
-            <SettingsPage 
-              stats={stats} 
-              setStats={setStats} 
-              questCapacity={questCapacity} 
-              setQuestCapacity={setQuestCapacity} 
+            <SettingsPage
+              stats={stats}
+              setStats={setStats}
+              questCapacity={questCapacity}
+              setQuestCapacity={setQuestCapacity}
             />
           } />
         </Routes>
@@ -76,7 +82,6 @@ function App() {
   );
 }
 
-// --- QUEST LIBRARY PAGE ---
 function QuestPage({ stats, masterQuestPool, setMasterQuestPool }) {
   const [title, setTitle] = useState('');
   const [selectedStat, setSelectedStat] = useState(stats[0]?.subject || '');
@@ -86,6 +91,10 @@ function QuestPage({ stats, masterQuestPool, setMasterQuestPool }) {
     if (!title) return;
     setMasterQuestPool([...masterQuestPool, { id: Date.now(), title, stat: selectedStat, rarity }]);
     setTitle('');
+  };
+
+  const deleteQuest = (id) => {
+    setMasterQuestPool(masterQuestPool.filter(q => q.id !== id));
   };
 
   const grouped = stats.reduce((acc, s) => {
@@ -98,7 +107,7 @@ function QuestPage({ stats, masterQuestPool, setMasterQuestPool }) {
       <h3>Master Library</h3>
       <details style={{ background: '#242424', padding: '15px', borderRadius: '12px', marginBottom: '20px', border: '1px solid #333' }}>
         <summary style={{ cursor: 'pointer', color: '#646cff', fontWeight: 'bold' }}>+ Create New Quest Template</summary>
-        <input 
+        <input
           placeholder="Quest Title..." value={title} onChange={(e) => setTitle(e.target.value)}
           style={{ width: '95%', padding: '10px', margin: '15px 0 10px 0', background: '#000', color: 'white', border: '1px solid #444', borderRadius: '4px' }}
         />
@@ -118,17 +127,19 @@ function QuestPage({ stats, masterQuestPool, setMasterQuestPool }) {
           <div style={{ borderBottom: '1px solid #333', color: '#888', fontSize: '0.7rem', paddingBottom: '5px', letterSpacing: '1px' }}>{s.subject.toUpperCase()}</div>
           {grouped[s.subject]?.length === 0 && <div style={{ fontSize: '0.8rem', color: '#444', padding: '10px' }}>No templates yet...</div>}
           {grouped[s.subject]?.map(q => (
-            <div key={q.id} style={{ 
-              background: '#1a1a1a', padding: '12px', margin: '8px 0', borderRadius: '8px', 
+            <div key={q.id} style={{
+              background: '#1a1a1a', padding: '12px', margin: '8px 0', borderRadius: '8px',
               display: 'flex', justifyContent: 'space-between', alignItems: 'center',
               borderLeft: `4px solid ${RARITY_SETTINGS[q.rarity]?.color}`,
-              boxShadow: q.rarity === 'Mythic' ? '0 0 15px rgba(255, 62, 62, 0.2)' : 'none'
             }}>
               <div>
                 <div style={{ fontWeight: '500' }}>{q.title}</div>
                 <div style={{ fontSize: '0.6rem', color: RARITY_SETTINGS[q.rarity]?.color, fontWeight: 'bold', marginTop: '2px' }}>{q.rarity.toUpperCase()}</div>
               </div>
-              <div style={{ fontSize: '0.7rem', color: '#646cff', fontWeight: 'bold' }}>+{RARITY_SETTINGS[q.rarity]?.xp} XP</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+                <div style={{ fontSize: '0.7rem', color: '#646cff', fontWeight: 'bold' }}>+{RARITY_SETTINGS[q.rarity]?.xp} XP</div>
+                <button onClick={() => deleteQuest(q.id)} style={{ background: 'transparent', border: 'none', color: '#444', cursor: 'pointer' }}>✕</button>
+              </div>
             </div>
           ))}
         </div>
@@ -137,64 +148,66 @@ function QuestPage({ stats, masterQuestPool, setMasterQuestPool }) {
   );
 }
 
-// --- SETTINGS PAGE (TUNING) ---
 function SettingsPage({ stats, setStats, questCapacity, setQuestCapacity }) {
   const [expanded, setExpanded] = useState(-1);
+  const [newStatName, setNewStatName] = useState('');
   const totalWeight = stats.reduce((acc, s) => acc + s.weight, 0);
 
   const updateStat = (index, field, value) => {
-    const copy = [...stats];
-    copy[index][field] = value;
-    setStats(copy);
+    const nextStats = stats.map((s, i) => {
+      if (i === index) return { ...s, [field]: Number(value) };
+      return s;
+    });
+    setStats(nextStats);
+  };
+
+  const addNewStat = () => {
+    if (!newStatName || stats.find(s => s.subject.toLowerCase() === newStatName.toLowerCase())) return;
+    setStats([...stats, { subject: newStatName, A: 50, weight: 1.0 }]);
+    setNewStatName('');
+  };
+
+  const deleteStat = (index) => {
+    if (stats.length <= 3) return alert("Min 3 stats required!");
+    setStats(stats.filter((_, i) => i !== index));
+    setExpanded(-1);
   };
 
   return (
     <div>
       <h3>System Tuning</h3>
-      
       <div style={{ background: '#242424', padding: '15px', borderRadius: '12px', marginBottom: '20px', border: '1px solid #444' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
           <span>Daily Quest Slots</span>
           <span style={{ color: '#646cff', fontWeight: 'bold' }}>{questCapacity}</span>
         </div>
-        <input 
-          type="range" min="1" max="10" value={questCapacity} 
-          onChange={(e) => setQuestCapacity(Number(e.target.value))} 
-          style={{ width: '100%', accentColor: '#646cff' }}
-        />
+        <input type="range" min="1" max="10" value={questCapacity} onChange={(e) => setQuestCapacity(Number(e.target.value))} style={{ width: '100%' }} />
+      </div>
+
+      <h3>Add New Attribute</h3>
+      <div style={{ display: 'flex', gap: '5px', marginBottom: '20px' }}>
+        <input placeholder="New Stat..." value={newStatName} onChange={(e) => setNewStatName(e.target.value)} style={{ flex: 1, padding: '10px', background: '#1a1a1a', color: 'white', border: '1px solid #444' }} />
+        <button onClick={addNewStat} style={{ backgroundColor: '#646cff', color: 'white', border: 'none', padding: '10px', cursor: 'pointer' }}>CREATE</button>
       </div>
 
       <h3>Stat Weights & Levels</h3>
-      {stats.map((s, i) => {
-        const prob = ((s.weight / totalWeight) * 100).toFixed(1);
-        return (
-          <div key={s.subject} style={{ border: '1px solid #333', marginBottom: '8px', borderRadius: '8px', overflow: 'hidden' }}>
-            <div onClick={() => setExpanded(expanded === i ? -1 : i)} 
-                 style={{ padding: '12px', cursor: 'pointer', display: 'flex', justifyContent: 'space-between', background: expanded === i ? '#1a1a1a' : 'transparent' }}>
-              <div>
-                <span style={{ fontWeight: 'bold' }}>{s.subject}</span>
-                <div style={{ fontSize: '0.7rem', color: '#888' }}>Level {s.A}</div>
-              </div>
-              <div style={{ textAlign: 'right' }}>
-                <div style={{ color: '#646cff', fontSize: '0.8rem' }}>{prob}% Spawn Rate</div>
-              </div>
-            </div>
-            
-            {expanded === i && (
-              <div style={{ padding: '15px', background: '#111', borderTop: '1px solid #333' }}>
-                <div style={{ marginBottom: '15px' }}>
-                  <label style={{ fontSize: '0.7rem', color: '#888', display: 'block', marginBottom: '5px' }}>BASE LEVEL</label>
-                  <input type="range" min="0" max="200" value={s.A} onChange={(e) => updateStat(i, 'A', Number(e.target.value))} style={{ width: '100%' }} />
-                </div>
-                <div>
-                  <label style={{ fontSize: '0.7rem', color: '#888', display: 'block', marginBottom: '5px' }}>SPAWN WEIGHT (FREQUENCY)</label>
-                  <input type="range" min="0.1" max="5" step="0.1" value={s.weight} onChange={(e) => updateStat(i, 'weight', Number(e.target.value))} style={{ width: '100%' }} />
-                </div>
-              </div>
-            )}
+      {stats.map((s, i) => (
+        <div key={s.subject} style={{ border: '1px solid #333', marginBottom: '8px', borderRadius: '8px', overflow: 'hidden' }}>
+          <div onClick={() => setExpanded(expanded === i ? -1 : i)} style={{ padding: '12px', cursor: 'pointer', display: 'flex', justifyContent: 'space-between', background: expanded === i ? '#1a1a1a' : 'transparent' }}>
+            <div><span style={{ fontWeight: 'bold' }}>{s.subject}</span><div style={{ fontSize: '0.7rem', color: '#888' }}>Level {s.A}</div></div>
+            <div style={{ color: '#646cff', fontSize: '0.8rem' }}>{((s.weight / totalWeight) * 100).toFixed(1)}% Spawn</div>
           </div>
-        );
-      })}
+          {expanded === i && (
+            <div style={{ padding: '15px', background: '#111', borderTop: '1px solid #333' }}>
+              <label style={{ fontSize: '0.7rem', color: '#888' }}>BASE LEVEL</label>
+              <input type="range" min="0" max="200" value={s.A} onChange={(e) => updateStat(i, 'A', e.target.value)} style={{ width: '100%', marginBottom: '15px' }} />
+              <label style={{ fontSize: '0.7rem', color: '#888' }}>SPAWN WEIGHT</label>
+              <input type="range" min="0.1" max="5" step="0.1" value={s.weight} onChange={(e) => updateStat(i, 'weight', e.target.value)} style={{ width: '100%' }} />
+              <button onClick={() => deleteStat(i)} style={{ marginTop: '15px', width: '100%', padding: '8px', border: '1px solid #ff3e3e', color: '#ff3e3e', background: 'transparent', cursor: 'pointer' }}>DELETE</button>
+            </div>
+          )}
+        </div>
+      ))}
     </div>
   );
 }
