@@ -1,0 +1,15 @@
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QLL\bin\Debug\net10.0\Mod5QLL.exe
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QLL\bin\Debug\net10.0\Mod5QLL.deps.json
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QLL\bin\Debug\net10.0\Mod5QLL.runtimeconfig.json
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QLL\bin\Debug\net10.0\Mod5QLL.dll
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QLL\bin\Debug\net10.0\Mod5QLL.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QLL\obj\Debug\net10.0\Mod5QLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QLL\obj\Debug\net10.0\Mod5QLL.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QLL\obj\Debug\net10.0\Mod5QLL.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QLL\obj\Debug\net10.0\Mod5QLL.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QLL\obj\Debug\net10.0\Mod5QLL.sourcelink.json
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QLL\obj\Debug\net10.0\Mod5QLL.dll
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QLL\obj\Debug\net10.0\refint\Mod5QLL.dll
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QLL\obj\Debug\net10.0\Mod5QLL.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QLL\obj\Debug\net10.0\Mod5QLL.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QLL\obj\Debug\net10.0\ref\Mod5QLL.dll

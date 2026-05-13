@@ -1,0 +1,15 @@
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QArray\bin\Debug\net10.0\Mod5QArray.exe
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QArray\bin\Debug\net10.0\Mod5QArray.deps.json
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QArray\bin\Debug\net10.0\Mod5QArray.runtimeconfig.json
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QArray\bin\Debug\net10.0\Mod5QArray.dll
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QArray\bin\Debug\net10.0\Mod5QArray.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QArray\obj\Debug\net10.0\Mod5QArray.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QArray\obj\Debug\net10.0\Mod5QArray.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QArray\obj\Debug\net10.0\Mod5QArray.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QArray\obj\Debug\net10.0\Mod5QArray.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QArray\obj\Debug\net10.0\Mod5QArray.sourcelink.json
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QArray\obj\Debug\net10.0\Mod5QArray.dll
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QArray\obj\Debug\net10.0\refint\Mod5QArray.dll
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QArray\obj\Debug\net10.0\Mod5QArray.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QArray\obj\Debug\net10.0\Mod5QArray.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod5QArray\obj\Debug\net10.0\ref\Mod5QArray.dll
