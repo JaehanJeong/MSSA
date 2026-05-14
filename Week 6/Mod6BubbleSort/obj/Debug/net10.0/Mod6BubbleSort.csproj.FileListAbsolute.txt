@@ -1,0 +1,15 @@
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod6BubbleSort\bin\Debug\net10.0\Mod6BubbleSort.exe
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod6BubbleSort\bin\Debug\net10.0\Mod6BubbleSort.deps.json
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod6BubbleSort\bin\Debug\net10.0\Mod6BubbleSort.runtimeconfig.json
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod6BubbleSort\bin\Debug\net10.0\Mod6BubbleSort.dll
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod6BubbleSort\bin\Debug\net10.0\Mod6BubbleSort.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod6BubbleSort\obj\Debug\net10.0\Mod6BubbleSort.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod6BubbleSort\obj\Debug\net10.0\Mod6BubbleSort.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod6BubbleSort\obj\Debug\net10.0\Mod6BubbleSort.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod6BubbleSort\obj\Debug\net10.0\Mod6BubbleSort.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod6BubbleSort\obj\Debug\net10.0\Mod6BubbleSort.sourcelink.json
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod6BubbleSort\obj\Debug\net10.0\Mod6BubbleSort.dll
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod6BubbleSort\obj\Debug\net10.0\refint\Mod6BubbleSort.dll
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod6BubbleSort\obj\Debug\net10.0\Mod6BubbleSort.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod6BubbleSort\obj\Debug\net10.0\Mod6BubbleSort.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\MSSA\Week 6\Mod6BubbleSort\obj\Debug\net10.0\ref\Mod6BubbleSort.dll
