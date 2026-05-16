@@ -1,0 +1,62 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jaeha\\source\\repos\\MSSA\\LeetCode\\Longest Common Prefix\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BDB58F85-7765-4426-BE49-409473686F6C}|Longest Common Prefix.csproj|c:\\users\\jaeha\\source\\repos\\mssa\\leetcode\\longest common prefix\\solution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDB58F85-7765-4426-BE49-409473686F6C}|Longest Common Prefix.csproj|solutionrelative:solution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDB58F85-7765-4426-BE49-409473686F6C}|Longest Common Prefix.csproj|c:\\users\\jaeha\\source\\repos\\mssa\\leetcode\\longest common prefix\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDB58F85-7765-4426-BE49-409473686F6C}|Longest Common Prefix.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Solution.cs",
+              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\MSSA\\LeetCode\\Longest Common Prefix\\Solution.cs",
+              "RelativeDocumentMoniker": "Solution.cs",
+              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\MSSA\\LeetCode\\Longest Common Prefix\\Solution.cs",
+              "RelativeToolTip": "Solution.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T17:54:17.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\MSSA\\LeetCode\\Longest Common Prefix\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\MSSA\\LeetCode\\Longest Common Prefix\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T17:53:43.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
