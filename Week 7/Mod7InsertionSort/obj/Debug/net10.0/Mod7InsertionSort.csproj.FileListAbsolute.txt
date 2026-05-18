@@ -1,0 +1,15 @@
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7InsertionSort\bin\Debug\net10.0\Mod7InsertionSort.exe
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7InsertionSort\bin\Debug\net10.0\Mod7InsertionSort.deps.json
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7InsertionSort\bin\Debug\net10.0\Mod7InsertionSort.runtimeconfig.json
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7InsertionSort\bin\Debug\net10.0\Mod7InsertionSort.dll
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7InsertionSort\bin\Debug\net10.0\Mod7InsertionSort.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7InsertionSort\obj\Debug\net10.0\Mod7InsertionSort.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7InsertionSort\obj\Debug\net10.0\Mod7InsertionSort.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7InsertionSort\obj\Debug\net10.0\Mod7InsertionSort.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7InsertionSort\obj\Debug\net10.0\Mod7InsertionSort.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7InsertionSort\obj\Debug\net10.0\Mod7InsertionSort.sourcelink.json
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7InsertionSort\obj\Debug\net10.0\Mod7InsertionSort.dll
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7InsertionSort\obj\Debug\net10.0\refint\Mod7InsertionSort.dll
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7InsertionSort\obj\Debug\net10.0\Mod7InsertionSort.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7InsertionSort\obj\Debug\net10.0\Mod7InsertionSort.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7InsertionSort\obj\Debug\net10.0\ref\Mod7InsertionSort.dll

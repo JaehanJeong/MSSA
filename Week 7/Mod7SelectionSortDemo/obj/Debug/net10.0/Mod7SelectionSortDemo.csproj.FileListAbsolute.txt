@@ -1,0 +1,15 @@
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7SelectionSortDemo\bin\Debug\net10.0\Mod7SelectionSortDemo.exe
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7SelectionSortDemo\bin\Debug\net10.0\Mod7SelectionSortDemo.deps.json
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7SelectionSortDemo\bin\Debug\net10.0\Mod7SelectionSortDemo.runtimeconfig.json
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7SelectionSortDemo\bin\Debug\net10.0\Mod7SelectionSortDemo.dll
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7SelectionSortDemo\bin\Debug\net10.0\Mod7SelectionSortDemo.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7SelectionSortDemo\obj\Debug\net10.0\Mod7SelectionSortDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7SelectionSortDemo\obj\Debug\net10.0\Mod7SelectionSortDemo.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7SelectionSortDemo\obj\Debug\net10.0\Mod7SelectionSortDemo.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7SelectionSortDemo\obj\Debug\net10.0\Mod7SelectionSortDemo.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7SelectionSortDemo\obj\Debug\net10.0\Mod7SelectionSortDemo.sourcelink.json
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7SelectionSortDemo\obj\Debug\net10.0\Mod7SelectionSortDemo.dll
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7SelectionSortDemo\obj\Debug\net10.0\refint\Mod7SelectionSortDemo.dll
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7SelectionSortDemo\obj\Debug\net10.0\Mod7SelectionSortDemo.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7SelectionSortDemo\obj\Debug\net10.0\Mod7SelectionSortDemo.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod7SelectionSortDemo\obj\Debug\net10.0\ref\Mod7SelectionSortDemo.dll
