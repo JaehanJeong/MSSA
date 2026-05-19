@@ -14,6 +14,7 @@ build_property.ProjectTypeGuids =
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EntryPointFilePath = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Assignment_4._2_Teacher_Student_Forms
 build_property.ProjectDir = C:\Users\jaeha\source\repos\MSSA\Week 4\Assignment 4.2 Teacher Student Forms\

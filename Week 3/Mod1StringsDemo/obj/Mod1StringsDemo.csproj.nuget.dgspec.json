@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jaeha\\source\\repos\\Week 3\\Mod1StringsDemo\\Mod1StringsDemo.csproj": {}
+    "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 3\\Mod1StringsDemo\\Mod1StringsDemo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jaeha\\source\\repos\\Week 3\\Mod1StringsDemo\\Mod1StringsDemo.csproj": {
+    "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 3\\Mod1StringsDemo\\Mod1StringsDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jaeha\\source\\repos\\Week 3\\Mod1StringsDemo\\Mod1StringsDemo.csproj",
+        "projectUniqueName": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 3\\Mod1StringsDemo\\Mod1StringsDemo.csproj",
         "projectName": "Mod1StringsDemo",
-        "projectPath": "C:\\Users\\jaeha\\source\\repos\\Week 3\\Mod1StringsDemo\\Mod1StringsDemo.csproj",
+        "projectPath": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 3\\Mod1StringsDemo\\Mod1StringsDemo.csproj",
         "packagesPath": "C:\\Users\\jaeha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jaeha\\source\\repos\\Week 3\\Mod1StringsDemo\\obj\\",
+        "outputPath": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 3\\Mod1StringsDemo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -67,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300-preview.0.26177.108/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

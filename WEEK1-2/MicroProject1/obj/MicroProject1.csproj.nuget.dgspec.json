@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jaeha\\source\\repos\\MicroProject1\\MicroProject1.csproj": {}
+    "C:\\Users\\jaeha\\source\\repos\\MSSA\\WEEK1-2\\MicroProject1\\MicroProject1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jaeha\\source\\repos\\MicroProject1\\MicroProject1.csproj": {
+    "C:\\Users\\jaeha\\source\\repos\\MSSA\\WEEK1-2\\MicroProject1\\MicroProject1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jaeha\\source\\repos\\MicroProject1\\MicroProject1.csproj",
+        "projectUniqueName": "C:\\Users\\jaeha\\source\\repos\\MSSA\\WEEK1-2\\MicroProject1\\MicroProject1.csproj",
         "projectName": "MicroProject1",
-        "projectPath": "C:\\Users\\jaeha\\source\\repos\\MicroProject1\\MicroProject1.csproj",
+        "projectPath": "C:\\Users\\jaeha\\source\\repos\\MSSA\\WEEK1-2\\MicroProject1\\MicroProject1.csproj",
         "packagesPath": "C:\\Users\\jaeha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jaeha\\source\\repos\\MicroProject1\\obj\\",
+        "outputPath": "C:\\Users\\jaeha\\source\\repos\\MSSA\\WEEK1-2\\MicroProject1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -67,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300-preview.0.26177.108/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
