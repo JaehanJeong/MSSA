@@ -1,0 +1,15 @@
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod8BSTDemo\bin\Debug\net10.0\Mod8BSTDemo.exe
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod8BSTDemo\bin\Debug\net10.0\Mod8BSTDemo.deps.json
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod8BSTDemo\bin\Debug\net10.0\Mod8BSTDemo.runtimeconfig.json
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod8BSTDemo\bin\Debug\net10.0\Mod8BSTDemo.dll
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod8BSTDemo\bin\Debug\net10.0\Mod8BSTDemo.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod8BSTDemo\obj\Debug\net10.0\Mod8BSTDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod8BSTDemo\obj\Debug\net10.0\Mod8BSTDemo.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod8BSTDemo\obj\Debug\net10.0\Mod8BSTDemo.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod8BSTDemo\obj\Debug\net10.0\Mod8BSTDemo.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod8BSTDemo\obj\Debug\net10.0\Mod8BSTDemo.sourcelink.json
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod8BSTDemo\obj\Debug\net10.0\Mod8BSTDemo.dll
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod8BSTDemo\obj\Debug\net10.0\refint\Mod8BSTDemo.dll
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod8BSTDemo\obj\Debug\net10.0\Mod8BSTDemo.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod8BSTDemo\obj\Debug\net10.0\Mod8BSTDemo.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\MSSA\Week 7\Mod8BSTDemo\obj\Debug\net10.0\ref\Mod8BSTDemo.dll

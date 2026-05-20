@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Mod8BSTDemo/1.0.0": {
+        "runtime": {
+          "Mod8BSTDemo.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Mod8BSTDemo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
