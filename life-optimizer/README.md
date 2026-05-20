@@ -1,16 +1,27 @@
-# React + Vite
+# Life Optimizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+Life Optimizer is a project built during MSSA focused on gamifying personal growth focused around user selected goals.
 
-Currently, two official plugins are available:
+## Features
+- Daily quest cards
+- Radar chart to visualize progress towards goals
+- Generate daily quest using Gemini api
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
+- C#
+- .NET 
+- React (Vite)
+- JavaScript
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Purpose
+This project is part of my MSSA coursework and is used to practice building structured applications and improving problem-solving skills.
 
-## Expanding the ESLint configuration
+## Status
+Frontend development in progress. Backend integration (planned with ASP.NET) is not yet implemented.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Future Plans
+- Build backend with ASP.NET
+- Add data persistence (save tasks)
+- User authentication (optional)
