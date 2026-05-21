@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route, Link, useLocation } from 'react-router-dom';
-import { GoogleGenAI } from '@google/genai'; 
 import StatsChart from './StatsChart';
 import QuestCard from './QuestCard';
 
@@ -19,98 +18,169 @@ const DEFAULT_QUESTS = [
   { id: 3, title: "Review monthly budget and savings goals", stat: "Wealth", rarity: "Epic", xpReward: 75 },
 ];
 
+// 🔧 Explicitly pointing to your .NET backend server port
+const BACKEND_BASE_URL = 'http://localhost:5248';
+
+const apiFetch = async (endpoint, options = {}) => {
+  const fullUrl = `${BACKEND_BASE_URL}${endpoint}`;
+  
+  const response = await fetch(fullUrl, {
+    headers: { 'Content-Type': 'application/json' },
+    ...options,
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    const message = `API request failed: ${fullUrl} (Status ${response.status}). Ensure backend is running on the correct port.`;
+    console.error(`[API ERROR]`, { fullUrl, status: response.status, body: errorText });
+    throw new Error(errorText || message);
+  }
+
+  const text = await response.text();
+  if (!text) {
+    return null;
+  }
+
+  return JSON.parse(text);
+};
+
+const mapServerStat = (stat) => ({
+  id: stat.id,
+  subject: stat.subject,
+  A: stat.level,
+  weight: stat.weight,
+});
+
+const mapServerQuestTemplate = (template) => ({
+  id: template.id,
+  title: template.title,
+  stat: template.stat,
+  rarity: template.rarity,
+  xpReward: template.xpReward,
+});
+
+const mapServerActiveQuest = (active) => ({
+  id: active.id,
+  title: active.questTemplate.title,
+  stat: active.questTemplate.stat,
+  rarity: active.questTemplate.rarity,
+  xpReward: active.questTemplate.xpReward,
+});
+
 function App() {
   const location = useLocation();
   const xpNeededForLevelUp = 100;
 
-  const [globalXp, setGlobalXp] = useState(() => Number(localStorage.getItem('lo_globalXp')) || 0);
-  const [globalLevel, setGlobalLevel] = useState(() => Number(localStorage.getItem('lo_globalLevel')) || 1);
-  const [questCapacity, setQuestCapacity] = useState(() => Number(localStorage.getItem('lo_questCapacity')) || 3);
-  
-  const [stats, setStats] = useState(() => {
-    const saved = localStorage.getItem('lo_stats');
-    if (saved !== null) {
-      const parsed = JSON.parse(saved);
-      if (parsed.some(s => s.subject === 'Focus' || s.subject === 'Violin')) return DEFAULT_STATS;
-      return parsed;
-    }
-    return DEFAULT_STATS;
-  });
+  const [globalXp, setGlobalXp] = useState(0);
+  const [globalLevel, setGlobalLevel] = useState(1);
+  const [questCapacity, setQuestCapacity] = useState(3);
+  const [stats, setStats] = useState(DEFAULT_STATS);
+  const [masterQuestPool, setMasterQuestPool] = useState(DEFAULT_QUESTS);
+  const [activeDailyQuests, setActiveDailyQuests] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const [masterQuestPool, setMasterQuestPool] = useState(() => {
-    const saved = localStorage.getItem('lo_masterQuestPool');
-    if (saved !== null) {
-      const parsed = JSON.parse(saved);
-      if (parsed.some(q => q.stat === 'Focus' || q.stat === 'Violin')) return DEFAULT_QUESTS;
-      return parsed;
-    }
-    return DEFAULT_QUESTS;
-  });
-
-  const [activeDailyQuests, setActiveDailyQuests] = useState(() => JSON.parse(localStorage.getItem('lo_activeDailyQuests')) || []);
-
-  useEffect(() => {
-    localStorage.setItem('lo_globalXp', globalXp);
-    localStorage.setItem('lo_globalLevel', globalLevel);
-    localStorage.setItem('lo_stats', JSON.stringify(stats));
-    localStorage.setItem('lo_questCapacity', questCapacity);
-    localStorage.setItem('lo_masterQuestPool', JSON.stringify(masterQuestPool));
-    localStorage.setItem('lo_activeDailyQuests', JSON.stringify(activeDailyQuests));
-  }, [globalXp, globalLevel, stats, questCapacity, masterQuestPool, activeDailyQuests]);
-
-  const generateDailyQuests = () => {
-    if (masterQuestPool.length === 0) return alert("Your Blueprint Library is empty!");
-    
-    const shuffled = [...masterQuestPool].sort(() => 0.5 - Math.random());
-    const selected = shuffled.slice(0, questCapacity).map(quest => ({
-      ...quest,
-      id: `active-${Date.now()}-${Math.random()}` 
-    }));
-
-    setActiveDailyQuests(selected);
+  const refreshProfile = async () => {
+    const profile = await apiFetch('/api/profile');
+    setGlobalXp(profile.globalXp);
+    setGlobalLevel(profile.globalLevel);
+    setQuestCapacity(profile.questCapacity);
+    setStats(profile.stats.map(mapServerStat));
   };
 
-  // --- FIXED PROGRESSION ENGINE: HANDLES EXPLOSIVE XP SURGES ---
-  const processQuestCompletion = (activeQuestId, statName, xpAwarded) => {
-    setActiveDailyQuests((prev) => prev.filter(q => q.id !== activeQuestId));
+  const refreshQuestTemplates = async () => {
+    const templates = await apiFetch('/api/questtemplates');
+    setMasterQuestPool(templates.map(mapServerQuestTemplate));
+  };
 
-    setStats((prevStats) =>
-      prevStats.map((s) => {
-        if (s.subject === statName) {
-          return { ...s, A: Math.min(parseFloat((s.A + 0.5).toFixed(2)), 100) };
-        }
-        return s;
-      })
-    );
+  const refreshActiveDailyQuests = async () => {
+    const active = await apiFetch('/api/activequests');
+    setActiveDailyQuests(active.map(mapServerActiveQuest));
+  };
 
-    setGlobalXp((prevXp) => {
-      let currentXp = prevXp + xpAwarded;
-      let currentLevel = globalLevel;
-      let levelsGained = 0;
+  useEffect(() => {
+    const loadAll = async () => {
+      try {
+        setIsLoading(true);
+        setErrorMessage('');
 
-      // Safe loop engine to crunch out multiple level ups at once
-      while (currentXp >= xpNeededForLevelUp) {
-        currentXp -= xpNeededForLevelUp;
-        currentLevel += 1;
-        levelsGained += 1;
+        await refreshProfile();
+        await Promise.all([refreshQuestTemplates(), refreshActiveDailyQuests()]);
+      } catch (error) {
+        setErrorMessage(error instanceof Error ? error.message : 'Failed to load app data.');
+      } finally {
+        setIsLoading(false);
       }
+    };
 
-      if (levelsGained > 0) {
-        setGlobalLevel(currentLevel);
-        
-        if (levelsGained === 1) {
-          alert(`🎉 LEVEL UP! You reached Global Level ${currentLevel}!`);
+    loadAll();
+  }, []);
+
+  const generateDailyQuests = async () => {
+    if (masterQuestPool.length === 0) return alert("Your Blueprint Library is empty!");
+
+    try {
+      await apiFetch('/api/activequests/roll', {
+        method: 'POST',
+        body: JSON.stringify({ count: questCapacity }),
+      });
+      await refreshActiveDailyQuests();
+    } catch (error) {
+      alert(error instanceof Error ? error.message : 'Failed to roll daily quests.');
+    }
+  };
+
+  const processQuestCompletion = async (activeQuestId) => {
+    try {
+      const result = await apiFetch('/api/activequests/complete', {
+        method: 'POST',
+        body: JSON.stringify({ activeQuestId }),
+      });
+
+      await refreshProfile();
+      await refreshActiveDailyQuests();
+
+      if (result.levelsGained > 0) {
+        if (result.levelsGained === 1) {
+          alert(`🎉 LEVEL UP! You reached Global Level ${result.globalLevel}!`);
         } else {
-          alert(`🔥 MULTI-LEVEL Surge! You gained +${levelsGained} levels at once and reached Level ${currentLevel}!`);
+          alert(`🔥 MULTI-LEVEL Surge! You gained +${result.levelsGained} levels at once and reached Level ${result.globalLevel}!`);
         }
       }
+    } catch (error) {
+      alert(error instanceof Error ? error.message : 'Failed to complete quest.');
+    }
+  };
 
-      return currentXp; 
+  const saveSettings = async () => {
+    try {
+      await apiFetch('/api/profile', {
+        method: 'PUT',
+        body: JSON.stringify({
+          questCapacity,
+          stats: stats.map((s) => ({ id: s.id, level: s.A, weight: s.weight })),
+        }),
+      });
+      await refreshProfile();
+      alert('Settings saved.');
+    } catch (error) {
+      alert(error instanceof Error ? error.message : 'Failed to save settings.');
+    }
+  };
+
+  const createStat = async (subject) => {
+    return apiFetch('/api/stats', {
+      method: 'POST',
+      body: JSON.stringify({ subject, level: 10, weight: 1.0 }),
     });
   };
 
+  const deleteStat = async (statId) => {
+    await apiFetch(`/api/stats/${statId}`, { method: 'DELETE' });
+  };
+
   return (
-    <div style={{ padding: '20px', maxWidth: '500px', margin: '0 auto', paddingBottom: '80px', color: 'white', minHeight: '100vh', backgroundColor: '#0f0f0f' }}>
+    <div style={{ padding: '20px', maxWidth: '500px', margin: '0 auto', paddingBottom: '80px', color: 'white', minHeight: '100vh', backgroundColor: '#0f0f0f', boxSizing: 'border-box' }}>
       
       <header style={{ marginBottom: '20px', textAlign: 'center' }}>
         <h1 style={{ color: '#646cff', letterSpacing: '2px', margin: '0 0 5px 0' }}>LIFE OPTIMIZER</h1>
@@ -122,6 +192,17 @@ function App() {
           <div style={{ width: `${(globalXp / xpNeededForLevelUp) * 100}%`, height: '100%', backgroundColor: '#646cff', transition: 'width 0.3s ease' }} />
         </div>
       </header>
+
+      {isLoading && (
+        <div style={{ color: '#aaa', fontSize: '0.9rem', textAlign: 'center', marginBottom: '20px' }}>
+          Loading app data...
+        </div>
+      )}
+      {errorMessage && (
+        <div style={{ color: '#ff6b6b', fontSize: '0.9rem', textAlign: 'center', marginBottom: '20px' }}>
+          {errorMessage}
+        </div>
+      )}
 
       <main>
         <Routes>
@@ -153,7 +234,7 @@ function App() {
                       stat={q.stat}
                       rarity={q.rarity}
                       xp={q.xpReward}
-                      onComplete={() => processQuestCompletion(q.id, q.stat, q.xpReward)}
+                      onComplete={() => processQuestCompletion(q.id)}
                     />
                   ))
                 )}
@@ -175,6 +256,9 @@ function App() {
               setStats={setStats} 
               questCapacity={questCapacity} 
               setQuestCapacity={setQuestCapacity} 
+              onSaveSettings={saveSettings}
+              onCreateStat={createStat}
+              onDeleteStat={deleteStat}
             />
           } />
         </Routes>
@@ -195,7 +279,10 @@ function App() {
 
 function QuestPage({ stats, masterQuestPool, setMasterQuestPool }) {
   const [title, setTitle] = useState('');
-  const [selectedStat, setSelectedStat] = useState(stats[0]?.subject || '');
+  
+  // 1. Initialize it to an empty string.
+  const [selectedStat, setSelectedStat] = useState('');
+  
   const [rarity, setRarity] = useState('Common');
   const [expandedCategory, setExpandedCategory] = useState(-1);
   
@@ -209,82 +296,91 @@ function QuestPage({ stats, masterQuestPool, setMasterQuestPool }) {
 
   const rarityXpValues = { Common: 10, Rare: 25, Epic: 50, Legendary: 100 };
 
-  useEffect(() => {
-    if (stats.length > 0 && !stats.find(s => s.subject === selectedStat)) {
-      setSelectedStat(stats[0].subject);
-    }
-  }, [stats]);
+  // 🛑 BUGGY USEEFFECT REMOVED ENTIRELY. No more race conditions.
 
-  const addQuest = () => {
-    if (!title) return;
-    setMasterQuestPool([...masterQuestPool, { 
-      id: Date.now(), 
-      title, 
-      stat: selectedStat, 
-      rarity,
-      xpReward: rarityXpValues[rarity]
-    }]);
-    setTitle('');
+  // 2. Derive the active selection safely. 
+  // If selectedStat is blank or doesn't exist in the current stats array, 
+  // we fallback to the first stat's subject automatically.
+  const currentSelection = stats.some(s => s.subject === selectedStat)
+    ? selectedStat 
+    : (stats[0]?.subject || '');
+
+  const addQuest = async () => {
+    if (!title.trim()) return;
+
+    try {
+      const created = await apiFetch('/api/questtemplates', {
+        method: 'POST',
+        body: JSON.stringify({
+          title: title.trim(),
+          stat: currentSelection, // Use the safe derived value here
+          rarity,
+          xpReward: rarityXpValues[rarity],
+        }),
+      });
+
+      setMasterQuestPool([...masterQuestPool, mapServerQuestTemplate(created)]);
+      setTitle('');
+    } catch (error) {
+      alert(error instanceof Error ? error.message : 'Failed to add quest template.');
+    }
   };
 
   const generateAiQuest = async () => {
     if (!aiPrompt.trim()) return alert("Enter a real-world concept or task first!");
-    
-    const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
-    if (!apiKey) return alert("Missing VITE_GEMINI_API_KEY env variable.");
 
     setIsAiLoading(true);
     try {
-      const ai = new GoogleGenAI({ apiKey });
-      const availableAttributes = stats.map(s => s.subject).join(', ');
-
-      const response = await ai.models.generateContent({
-        model: 'gemini-2.5-flash',
-        contents: `You are an expert game designer running an RPG real-life simulator. 
-        Turn this real-world task or goal into an epic RPG quest template: "${aiPrompt}".
-        You must pick the most logical matching life attribute from this list: [${availableAttributes}].
-        You must assign an appropriate rarity from this list: [Common, Rare, Epic, Legendary].
-        Return strictly JSON matching this structure:
-        { "title": "Title String", "stat": "Attribute String", "rarity": "Rarity String" }`,
-        config: { responseMimeType: "application/json" }
+      const response = await apiFetch('/api/ai/quest', {
+        method: 'POST',
+        body: JSON.stringify({
+          prompt: aiPrompt,
+          attributes: stats.map(s => s.subject),
+        }),
       });
 
-      const resultData = JSON.parse(response.text);
-      
-      setPreviewTitle(resultData.title);
-      setPreviewStat(stats.find(s => s.subject === resultData.stat) ? resultData.stat : stats[0].subject);
-      setPreviewRarity(rarityXpValues[resultData.rarity] ? resultData.rarity : 'Common');
-      
-      setIsAiLoading(false);
-      setShowPreviewModal(true); 
+      setPreviewTitle(response.title || 'Untitled Quest');
+      setPreviewStat(stats.find(s => s.subject === response.stat) ? response.stat : stats[0].subject);
+      setPreviewRarity(rarityXpValues[response.rarity] ? response.rarity : 'Common');
 
+      setIsAiLoading(false);
+      setShowPreviewModal(true);
     } catch (error) {
       console.error(error);
-      alert("Failed to synthesize quest card.");
+      alert(error instanceof Error ? error.message : 'Failed to synthesize quest card.');
       setIsAiLoading(false);
     }
   };
 
-  const commitPreviewQuest = () => {
+  const commitPreviewQuest = async () => {
     if (!previewTitle.trim()) return alert("Title can't be blank!");
-    
-    setMasterQuestPool(prevPool => [
-      ...prevPool,
-      {
-        id: Date.now(),
-        title: previewTitle,
-        stat: previewStat,
-        rarity: previewRarity,
-        xpReward: rarityXpValues[previewRarity]
-      }
-    ]);
 
-    setShowPreviewModal(false);
-    setAiPrompt('');
+    try {
+      const created = await apiFetch('/api/questtemplates', {
+        method: 'POST',
+        body: JSON.stringify({
+          title: previewTitle.trim(),
+          stat: previewStat,
+          rarity: previewRarity,
+          xpReward: rarityXpValues[previewRarity],
+        }),
+      });
+
+      setMasterQuestPool(prevPool => [...prevPool, mapServerQuestTemplate(created)]);
+      setShowPreviewModal(false);
+      setAiPrompt('');
+    } catch (error) {
+      alert(error instanceof Error ? error.message : 'Failed to save AI quest template.');
+    }
   };
 
-  const deleteTemplate = (id) => {
-    setMasterQuestPool(masterQuestPool.filter(q => q.id !== id));
+  const deleteTemplate = async (id) => {
+    try {
+      await apiFetch(`/api/questtemplates/${id}`, { method: 'DELETE' });
+      setMasterQuestPool(masterQuestPool.filter(q => q.id !== id));
+    } catch (error) {
+      alert(error instanceof Error ? error.message : 'Failed to delete template.');
+    }
   };
 
   const grouped = stats.reduce((acc, s) => {
@@ -297,7 +393,7 @@ function QuestPage({ stats, masterQuestPool, setMasterQuestPool }) {
       <h3>Master Library Blueprint</h3>
       
       {/* AI GENERATOR PANEL */}
-      <div style={{ background: 'linear-gradient(135deg, #242424 0%, #1e133a 100%)', padding: '15px', borderRadius: '12px', marginBottom: '15px', border: '1px solid #4a2ba3' }}>
+      <div style={{ background: 'linear-gradient(135deg, #242424 0%, #1e133a 100%)', padding: '15px', borderRadius: '12px', marginBottom: '15px', border: '1px solid #4a2ba3', boxSizing: 'border-box' }}>
         <h4 style={{ margin: '0 0 10px 0', color: '#a335ee', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '6px' }}>
           🔮 AI Quest Forge (Gemini)
         </h4>
@@ -307,7 +403,7 @@ function QuestPage({ stats, masterQuestPool, setMasterQuestPool }) {
             value={aiPrompt} 
             onChange={(e) => setAiPrompt(e.target.value)}
             disabled={isAiLoading}
-            style={{ flex: 1, padding: '10px', background: '#000', color: 'white', border: '1px solid #444', borderRadius: '6px', fontSize: '0.85rem' }}
+            style={{ flex: 1, padding: '10px', background: '#000', color: 'white', border: '1px solid #444', borderRadius: '6px', fontSize: '0.85rem', boxSizing: 'border-box' }}
           />
           <button 
             onClick={generateAiQuest}
@@ -320,18 +416,24 @@ function QuestPage({ stats, masterQuestPool, setMasterQuestPool }) {
       </div>
 
       {/* MANUAL CREATION PANEL */}
-      <details style={{ background: '#242424', padding: '15px', borderRadius: '12px', marginBottom: '25px', border: '1px solid #333' }}>
+      <details style={{ background: '#242424', padding: '15px', borderRadius: '12px', marginBottom: '25px', border: '1px solid #333', boxSizing: 'border-box' }}>
         <summary style={{ cursor: 'pointer', color: '#888', fontWeight: 'bold', fontSize: '0.85rem' }}>+ Create Manual Blueprint Template</summary>
         <input 
           placeholder="Quest Title..." value={title} onChange={(e) => setTitle(e.target.value)}
-          style={{ width: '95%', padding: '10px', margin: '15px 0 10px 0', background: '#000', color: 'white', border: '1px solid #444', borderRadius: '4px' }}
+          style={{ width: '100%', padding: '10px', margin: '15px 0 10px 0', background: '#000', color: 'white', border: '1px solid #444', borderRadius: '4px', boxSizing: 'border-box' }}
         />
         <div style={{ display: 'flex', gap: '5px', alignItems: 'center' }}>
-          <select value={selectedStat} onChange={(e) => setSelectedStat(e.target.value)} style={{ flex: 1, padding: '8px' }}>
-            {stats.map(s => <option key={s.subject}>{s.subject}</option>)}
+          
+          {/* 🔧 The HTML value attribute now points to our rock-solid derived currentSelection */}
+          <select 
+            value={currentSelection} 
+            onChange={(e) => setSelectedStat(e.target.value)} 
+            style={{ flex: 1, padding: '8px', background: '#1a1a1a', color: 'white', border: '1px solid #444', borderRadius: '4px' }}
+          >
+            {stats.map(s => <option key={s.subject} value={s.subject}>{s.subject}</option>)}
           </select>
           
-          <select value={rarity} onChange={(e) => setRarity(e.target.value)} style={{ flex: 1, padding: '8px', background: '#1a1a1a', color: 'white' }}>
+          <select value={rarity} onChange={(e) => setRarity(e.target.value)} style={{ flex: 1, padding: '8px', background: '#1a1a1a', color: 'white', border: '1px solid #444', borderRadius: '4px' }}>
             {Object.keys(rarityXpValues).map(tier => <option key={tier} value={tier}>{tier}</option>)}
           </select>
 
@@ -383,7 +485,7 @@ function QuestPage({ stats, masterQuestPool, setMasterQuestPool }) {
       {/* --- PREVIEW REVIEW MODAL --- */}
       {showPreviewModal && (
         <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.85)', display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 5000, padding: '20px' }}>
-          <div style={{ backgroundColor: '#1c1c1e', padding: '25px', borderRadius: '16px', border: '1px solid #333', width: '100%', maxWidth: '400px' }}>
+          <div style={{ backgroundColor: '#1c1c1e', padding: '25px', borderRadius: '16px', border: '1px solid #333', width: '100%', maxWidth: '400px', boxSizing: 'border-box' }}>
             <h3 style={{ margin: '0 0 5px 0', color: '#a335ee' }}>🔮 Review AI Blueprint</h3>
             <p style={{ fontSize: '0.75rem', color: '#888', margin: '0 0 20px 0' }}>Make adjustments to the parameters before storing.</p>
             
@@ -391,14 +493,14 @@ function QuestPage({ stats, masterQuestPool, setMasterQuestPool }) {
             <input 
               value={previewTitle} 
               onChange={(e) => setPreviewTitle(e.target.value)}
-              style={{ width: '94%', padding: '10px', background: '#000', color: '#fff', border: '1px solid #444', borderRadius: '6px', marginBottom: '15px', fontSize: '0.9rem' }}
+              style={{ width: '100%', padding: '10px', background: '#000', color: '#fff', border: '1px solid #444', borderRadius: '6px', marginBottom: '15px', fontSize: '0.9rem', boxSizing: 'border-box' }}
             />
 
             <label style={{ fontSize: '0.75rem', fontWeight: 'bold', color: '#aaa', display: 'block', marginBottom: '5px' }}>ASSIGNED LIFE ATTRIBUTE</label>
             <select 
               value={previewStat} 
               onChange={(e) => setPreviewStat(e.target.value)}
-              style={{ width: '100%', padding: '10px', background: '#000', color: '#fff', border: '1px solid #444', borderRadius: '6px', marginBottom: '15px' }}
+              style={{ width: '100%', padding: '10px', background: '#000', color: '#fff', border: '1px solid #444', borderRadius: '6px', marginBottom: '15px', boxSizing: 'border-box' }}
             >
               {stats.map(s => <option key={s.subject} value={s.subject}>{s.subject}</option>)}
             </select>
@@ -407,7 +509,7 @@ function QuestPage({ stats, masterQuestPool, setMasterQuestPool }) {
             <select 
               value={previewRarity} 
               onChange={(e) => setPreviewRarity(e.target.value)}
-              style={{ width: '100%', padding: '10px', background: '#000', color: '#fff', border: '1px solid #444', borderRadius: '6px', marginBottom: '25px' }}
+              style={{ width: '100%', padding: '10px', background: '#000', color: '#fff', border: '1px solid #444', borderRadius: '6px', marginBottom: '25px', boxSizing: 'border-box' }}
             >
               {Object.keys(rarityXpValues).map(tier => <option key={tier} value={tier}>{tier}</option>)}
             </select>
@@ -433,7 +535,7 @@ function QuestPage({ stats, masterQuestPool, setMasterQuestPool }) {
   );
 }
 
-function SettingsPage({ stats, setStats, questCapacity, setQuestCapacity }) {
+function SettingsPage({ stats, setStats, questCapacity, setQuestCapacity, onSaveSettings, onCreateStat, onDeleteStat }) {
   const [expanded, setExpanded] = useState(-1);
   const [newStatName, setNewStatName] = useState('');
   const totalWeight = stats.reduce((acc, s) => acc + s.weight, 0);
@@ -446,22 +548,38 @@ function SettingsPage({ stats, setStats, questCapacity, setQuestCapacity }) {
     setStats(nextStats);
   };
 
-  const addNewStat = () => {
-    if (!newStatName || stats.find(s => s.subject.toLowerCase() === newStatName.toLowerCase())) return;
-    setStats([...stats, { subject: newStatName, A: 10, weight: 1.0 }]);
-    setNewStatName('');
+  const addNewStat = async () => {
+    const trimmedName = newStatName.trim();
+    if (!trimmedName || stats.find(s => s.subject.toLowerCase() === trimmedName.toLowerCase())) return;
+
+    try {
+      const created = await onCreateStat(trimmedName);
+      setStats([...stats, mapServerStat(created)]);
+      setNewStatName('');
+    } catch (error) {
+      alert(error instanceof Error ? error.message : 'Failed to add new attribute.');
+    }
   };
 
-  const deleteStat = (index) => {
+  const deleteStatClick = async (index) => {
     if (stats.length <= 3) return alert("Min 3 stats required!");
-    setStats(stats.filter((_, i) => i !== index));
-    setExpanded(-1);
+
+    const stat = stats[index];
+    if (!stat?.id) return;
+
+    try {
+      await onDeleteStat(stat.id);
+      setStats(stats.filter((_, i) => i !== index));
+      setExpanded(-1);
+    } catch (error) {
+      alert(error instanceof Error ? error.message : 'Failed to delete attribute.');
+    }
   };
 
   return (
     <div>
       <h3>System Tuning</h3>
-      <div style={{ background: '#242424', padding: '15px', borderRadius: '12px', marginBottom: '20px', border: '1px solid #444' }}>
+      <div style={{ background: '#242424', padding: '15px', borderRadius: '12px', marginBottom: '20px', border: '1px solid #444', boxSizing: 'border-box' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
           <span>Daily Quest Slots</span>
           <span style={{ color: '#646cff', fontWeight: 'bold' }}>{questCapacity}</span>
@@ -471,16 +589,16 @@ function SettingsPage({ stats, setStats, questCapacity, setQuestCapacity }) {
 
       <h3>Add New Attribute</h3>
       <div style={{ display: 'flex', gap: '5px', marginBottom: '20px' }}>
-        <input placeholder="New Stat..." value={newStatName} onChange={(e) => setNewStatName(e.target.value)} style={{ flex: 1, padding: '10px', background: '#1a1a1a', color: 'white', border: '1px solid #444' }} />
-        <button onClick={addNewStat} style={{ backgroundColor: '#646cff', color: 'white', border: 'none', padding: '10px', cursor: 'pointer' }}>CREATE</button>
+        <input placeholder="New Stat..." value={newStatName} onChange={(e) => setNewStatName(e.target.value)} style={{ flex: 1, padding: '10px', background: '#1a1a1a', color: 'white', border: '1px solid #444', borderRadius: '4px', boxSizing: 'border-box' }} />
+        <button onClick={addNewStat} style={{ backgroundColor: '#646cff', color: 'white', border: 'none', padding: '10px', cursor: 'pointer', borderRadius: '4px', fontWeight: 'bold' }}>CREATE</button>
       </div>
 
       <h3>Stat Weights & Levels</h3>
       {stats.map((s, i) => (
         <div key={s.subject} style={{ border: '1px solid #333', marginBottom: '8px', borderRadius: '8px', overflow: 'hidden' }}>
-          <div onClick={() => setExpanded(expanded === i ? -1 : i)} style={{ padding: '12px', cursor: 'pointer', display: 'flex', justifyContent: 'space-between', background: expanded === i ? '#1a1a1a' : 'transparent' }}>
+          <div onClick={() => setExpanded(expanded === i ? -1 : i)} style={{ padding: '12px', cursor: 'pointer', display: 'flex', justifyContent: 'space-between', background: expanded === i ? '#1a1a1a' : 'transparent', userSelect: 'none' }}>
             <div><span style={{ fontWeight: 'bold' }}>{s.subject}</span><div style={{ fontSize: '0.7rem', color: '#888' }}>Level {s.A}</div></div>
-            <div style={{ color: '#646cff', fontSize: '0.8rem' }}>{((s.weight / totalWeight) * 100).toFixed(1)}% Spawn</div>
+            <div style={{ color: '#646cff', fontSize: '0.8rem' }}>{totalWeight > 0 ? ((s.weight / totalWeight) * 100).toFixed(1) : 0}% Spawn</div>
           </div>
           {expanded === i && (
             <div style={{ padding: '15px', background: '#111', borderTop: '1px solid #333' }}>
@@ -488,11 +606,15 @@ function SettingsPage({ stats, setStats, questCapacity, setQuestCapacity }) {
               <input type="range" min="0" max="100" value={s.A} onChange={(e) => updateStat(i, 'A', e.target.value)} style={{ width: '100%', marginBottom: '15px' }} />
               <label style={{ fontSize: '0.7rem', color: '#888' }}>SPAWN WEIGHT</label>
               <input type="range" min="0.1" max="5" step="0.1" value={s.weight} onChange={(e) => updateStat(i, 'weight', e.target.value)} style={{ width: '100%' }} />
-              <button onClick={() => deleteStat(i)} style={{ marginTop: '15px', width: '100%', padding: '8px', border: '1px solid #ff3e3e', color: '#ff3e3e', background: 'transparent', cursor: 'pointer' }}>DELETE</button>
+              <button onClick={() => deleteStatClick(i)} style={{ marginTop: '15px', width: '100%', padding: '8px', border: '1px solid #ff3e3e', color: '#ff3e3e', background: 'transparent', cursor: 'pointer', borderRadius: '6px' }}>DELETE</button>
             </div>
           )}
         </div>
       ))}
+
+      <button onClick={onSaveSettings} style={{ marginTop: '15px', width: '100%', padding: '12px', backgroundColor: '#646cff', color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer', fontWeight: 'bold' }}>
+        SAVE SETTINGS
+      </button>
     </div>
   );
 }
