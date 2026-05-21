@@ -6,7 +6,7 @@ This repository contains my work from the Microsoft Software & Systems Academy (
 ## Structure
 
 - `week1-7/` → weekly assignments and notes
-- `leetcode/` → practice problems
+- `leetcode/` → practice problems posted on https://www.youtube.com/@HumbledbyLeetCode
 - `life-optimizer/` → mini project
 
 ## Notes
