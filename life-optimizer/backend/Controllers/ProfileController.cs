@@ -49,6 +49,12 @@ namespace LifeOptimizer.Backend.Controllers
                 profile.QuestCapacity = update.QuestCapacity;
             }
 
+            if (update.GlobalLevel > 0)
+            {
+                // enforce minimum of 1
+                profile.GlobalLevel = Math.Max(1, update.GlobalLevel);
+            }
+
             if (update.Stats is not null)
             {
                 foreach (var statUpdate in update.Stats)
@@ -72,6 +78,7 @@ namespace LifeOptimizer.Backend.Controllers
     public class ProfileUpdateDto
     {
         public int QuestCapacity { get; set; }
+        public int GlobalLevel { get; set; }
         public List<StatUpdateDto>? Stats { get; set; }
     }
 

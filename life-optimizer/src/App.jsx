@@ -23,25 +23,30 @@ const BACKEND_BASE_URL = 'http://localhost:5248';
 
 const apiFetch = async (endpoint, options = {}) => {
   const fullUrl = `${BACKEND_BASE_URL}${endpoint}`;
-  
-  const response = await fetch(fullUrl, {
-    headers: { 'Content-Type': 'application/json' },
-    ...options,
-  });
 
-  if (!response.ok) {
-    const errorText = await response.text();
-    const message = `API request failed: ${fullUrl} (Status ${response.status}). Ensure backend is running on the correct port.`;
-    console.error(`[API ERROR]`, { fullUrl, status: response.status, body: errorText });
-    throw new Error(errorText || message);
+  try {
+    const response = await fetch(fullUrl, {
+      headers: { 'Content-Type': 'application/json' },
+      ...options,
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      const message = `API request failed: ${fullUrl} (Status ${response.status}).`;
+      console.error(`[API ERROR]`, { fullUrl, status: response.status, body: errorText });
+      throw new Error(errorText || message);
+    }
+
+    const text = await response.text();
+    if (!text) return null;
+    return JSON.parse(text);
+  } catch (err) {
+    const raw = err instanceof Error ? err.message : String(err);
+    if (raw === 'Failed to fetch' || raw.toLowerCase().includes('network')) {
+      throw new Error(`Network error contacting backend at ${fullUrl}. Is the backend running? (${raw})`);
+    }
+    throw err;
   }
-
-  const text = await response.text();
-  if (!text) {
-    return null;
-  }
-
-  return JSON.parse(text);
 };
 
 const mapServerStat = (stat) => ({
@@ -119,10 +124,13 @@ function App() {
   const generateDailyQuests = async () => {
     if (masterQuestPool.length === 0) return alert("Your Blueprint Library is empty!");
 
+    const remaining = Math.max(0, questCapacity - activeDailyQuests.length);
+    if (remaining <= 0) return alert('Quest board is full. Complete or remove existing quests first.');
+
     try {
       await apiFetch('/api/activequests/roll', {
         method: 'POST',
-        body: JSON.stringify({ count: questCapacity }),
+        body: JSON.stringify({ count: remaining }),
       });
       await refreshActiveDailyQuests();
     } catch (error) {
@@ -152,6 +160,28 @@ function App() {
     }
   };
 
+  const processQuestReroll = async (activeQuestId) => {
+    try {
+      await apiFetch('/api/activequests/reroll', {
+        method: 'POST',
+        body: JSON.stringify({ activeQuestId }),
+      });
+      await refreshActiveDailyQuests();
+    } catch (error) {
+      alert(error instanceof Error ? error.message : 'Failed to reroll quest.');
+    }
+  };
+
+  const processQuestDelete = async (activeQuestId) => {
+    try {
+      if (!window.confirm('Remove this quest for today?')) return;
+      await apiFetch(`/api/activequests/${activeQuestId}`, { method: 'DELETE' });
+      await refreshActiveDailyQuests();
+    } catch (error) {
+      alert(error instanceof Error ? error.message : 'Failed to remove quest.');
+    }
+  };
+
   const saveSettings = async () => {
     try {
       await apiFetch('/api/profile', {
@@ -165,6 +195,24 @@ function App() {
       alert('Settings saved.');
     } catch (error) {
       alert(error instanceof Error ? error.message : 'Failed to save settings.');
+    }
+  };
+
+  const resetGlobalLevel = async () => {
+    if (!window.confirm('Reset global level to 1?')) return;
+    try {
+      await apiFetch('/api/profile', {
+        method: 'PUT',
+        body: JSON.stringify({
+          questCapacity,
+          stats: stats.map((s) => ({ id: s.id, level: s.A, weight: s.weight })),
+          globalLevel: 1,
+        }),
+      });
+      await refreshProfile();
+      alert('Global level reset to 1.');
+    } catch (error) {
+      alert(error instanceof Error ? error.message : 'Failed to reset global level.');
     }
   };
 
@@ -216,7 +264,8 @@ function App() {
                   <h3 style={{ margin: 0 }}>Today's Active Board</h3>
                   <button 
                     onClick={generateDailyQuests}
-                    style={{ background: 'transparent', border: '1px solid #646cff', color: '#646cff', padding: '6px 12px', borderRadius: '20px', fontSize: '0.75rem', fontWeight: 'bold', cursor: 'pointer' }}
+                    disabled={activeDailyQuests.length >= questCapacity}
+                    style={{ background: 'transparent', border: '1px solid #646cff', color: '#646cff', padding: '6px 12px', borderRadius: '20px', fontSize: '0.75rem', fontWeight: 'bold', cursor: activeDailyQuests.length >= questCapacity ? 'not-allowed' : 'pointer', opacity: activeDailyQuests.length >= questCapacity ? 0.5 : 1 }}
                   >
                     🎲 Roll Daily Quests
                   </button>
@@ -235,6 +284,8 @@ function App() {
                       rarity={q.rarity}
                       xp={q.xpReward}
                       onComplete={() => processQuestCompletion(q.id)}
+                      onReroll={() => processQuestReroll(q.id)}
+                      onDelete={() => processQuestDelete(q.id)}
                     />
                   ))
                 )}
@@ -245,8 +296,10 @@ function App() {
           <Route path="/quests" element={
             <QuestPage 
               stats={stats} 
+              setStats={setStats}
               masterQuestPool={masterQuestPool} 
               setMasterQuestPool={setMasterQuestPool} 
+              onCreateStat={createStat}
             />
           } />
 
@@ -259,6 +312,7 @@ function App() {
               onSaveSettings={saveSettings}
               onCreateStat={createStat}
               onDeleteStat={deleteStat}
+              onResetGlobalLevel={resetGlobalLevel}
             />
           } />
         </Routes>
@@ -277,7 +331,7 @@ function App() {
   );
 }
 
-function QuestPage({ stats, masterQuestPool, setMasterQuestPool }) {
+function QuestPage({ stats, setStats, masterQuestPool, setMasterQuestPool, onCreateStat }) {
   const [title, setTitle] = useState('');
   
   // 1. Initialize it to an empty string.
@@ -304,6 +358,18 @@ function QuestPage({ stats, masterQuestPool, setMasterQuestPool }) {
   const currentSelection = stats.some(s => s.subject === selectedStat)
     ? selectedStat 
     : (stats[0]?.subject || '');
+
+  const unmatchedTemplates = masterQuestPool.filter(q => !stats.some(s => s.subject === q.stat));
+
+  const createStatForTemplate = async (statName) => {
+    if (!statName?.trim()) return;
+    try {
+      const created = await onCreateStat(statName.trim());
+      setStats(prev => [...prev, mapServerStat(created)]);
+    } catch (error) {
+      alert(error instanceof Error ? error.message : 'Failed to add missing attribute.');
+    }
+  };
 
   const addQuest = async () => {
     if (!title.trim()) return;
@@ -346,8 +412,7 @@ function QuestPage({ stats, masterQuestPool, setMasterQuestPool }) {
       setIsAiLoading(false);
       setShowPreviewModal(true);
     } catch (error) {
-      console.error(error);
-      alert(error instanceof Error ? error.message : 'Failed to synthesize quest card.');
+      console.warn(error);
       setIsAiLoading(false);
     }
   };
@@ -440,6 +505,28 @@ function QuestPage({ stats, masterQuestPool, setMasterQuestPool }) {
           <button onClick={addQuest} style={{ backgroundColor: '#222', color: 'white', border: '1px solid #444', padding: '8px 15px', borderRadius: '4px', cursor: 'pointer', fontWeight: 'bold' }}>ADD</button>
         </div>
       </details>
+
+      {unmatchedTemplates.length > 0 && (
+        <div style={{ marginBottom: '20px', padding: '16px', borderRadius: '12px', border: '1px solid #553a8b', background: '#10101a' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+            <div>
+              <h4 style={{ margin: 0, color: '#f9c74f', fontSize: '0.95rem' }}>Unmapped Templates</h4>
+              <p style={{ margin: '6px 0 0 0', color: '#aaa', fontSize: '0.8rem' }}>These templates do not currently match any active attribute.</p>
+            </div>
+          </div>
+          {unmatchedTemplates.map(q => (
+            <div key={q.id} style={{ display: 'flex', justifyContent: 'space-between', gap: '10px', alignItems: 'center', padding: '10px 0', borderTop: '1px solid #23233a' }}>
+              <div>
+                <div style={{ color: '#fff', fontSize: '0.9rem' }}>{q.title}</div>
+                <div style={{ color: '#777', fontSize: '0.75rem' }}>stat: {q.stat || '—'}</div>
+              </div>
+              <button onClick={() => createStatForTemplate(q.stat)} style={{ backgroundColor: '#646cff', color: 'white', border: 'none', padding: '8px 12px', borderRadius: '6px', cursor: 'pointer', fontSize: '0.8rem' }}>
+                Add "{q.stat}" attribute
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* Accordion Layout */}
       {stats.map((s, idx) => {
@@ -535,7 +622,7 @@ function QuestPage({ stats, masterQuestPool, setMasterQuestPool }) {
   );
 }
 
-function SettingsPage({ stats, setStats, questCapacity, setQuestCapacity, onSaveSettings, onCreateStat, onDeleteStat }) {
+function SettingsPage({ stats, setStats, questCapacity, setQuestCapacity, onSaveSettings, onCreateStat, onDeleteStat, onResetGlobalLevel }) {
   const [expanded, setExpanded] = useState(-1);
   const [newStatName, setNewStatName] = useState('');
   const totalWeight = stats.reduce((acc, s) => acc + s.weight, 0);
@@ -614,6 +701,9 @@ function SettingsPage({ stats, setStats, questCapacity, setQuestCapacity, onSave
 
       <button onClick={onSaveSettings} style={{ marginTop: '15px', width: '100%', padding: '12px', backgroundColor: '#646cff', color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer', fontWeight: 'bold' }}>
         SAVE SETTINGS
+      </button>
+      <button onClick={onResetGlobalLevel} style={{ marginTop: '10px', width: '100%', padding: '10px', backgroundColor: '#222', color: '#ffb86b', border: '1px solid #444', borderRadius: '8px', cursor: 'pointer' }}>
+        Reset Global Level to 1
       </button>
     </div>
   );

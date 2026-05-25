@@ -1,4 +1,4 @@
-function QuestCard({ title, description, stat, rarity, xp, onComplete }) {
+function QuestCard({ title, description, stat, rarity, xp, onComplete, onReroll, onDelete }) {
   // Simple color mapping to give each rarity visual weight
   const rarityColors = {
     Common: '#888888',
@@ -35,21 +35,53 @@ function QuestCard({ title, description, stat, rarity, xp, onComplete }) {
         <div style={{ color: '#646cff', fontWeight: 'bold' }}>+{xp} Global XP</div>
       </div>
 
-      <button 
-        onClick={onComplete}
-        style={{ 
-          backgroundColor: rarityColors[rarity] || '#646cff', 
-          color: 'white', 
-          border: 'none', 
-          padding: '10px',
-          borderRadius: '8px',
-          cursor: 'pointer',
-          width: '100%',
-          fontWeight: 'bold'
-        }}
-      >
-        Complete Quest
-      </button>
+      <div style={{ display: 'flex', gap: '8px' }}>
+        <button 
+          onClick={onComplete}
+          style={{ 
+            backgroundColor: rarityColors[rarity] || '#646cff', 
+            color: 'white', 
+            border: 'none', 
+            padding: '10px',
+            borderRadius: '8px',
+            cursor: 'pointer',
+            flex: 1,
+            fontWeight: 'bold'
+          }}
+        >
+          Complete Quest
+        </button>
+
+        <button
+          onClick={onReroll}
+          style={{
+            background: 'transparent',
+            border: '1px solid #444',
+            color: '#ffd966',
+            padding: '10px',
+            borderRadius: '8px',
+            cursor: 'pointer',
+            fontWeight: 'bold'
+          }}
+        >
+          Reroll
+        </button>
+
+        <button
+          onClick={onDelete}
+          style={{
+            background: 'transparent',
+            border: '1px solid #ff3e3e',
+            color: '#ff3e3e',
+            padding: '10px',
+            borderRadius: '8px',
+            cursor: 'pointer',
+            fontWeight: 'bold'
+          }}
+        >
+          Remove
+        </button>
+      </div>
     </div>
   );
 }

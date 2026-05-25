@@ -57,6 +57,57 @@ namespace LifeOptimizer.Backend.Controllers
             await _db.SaveChangesAsync();
             return NoContent();
         }
+
+        [HttpPost("normalize")]
+        public async Task<IActionResult> NormalizeStats()
+        {
+            var stats = await _db.Stats.ToListAsync();
+            var templates = await _db.QuestTemplates.ToListAsync();
+            var changed = new List<object>();
+
+            foreach (var t in templates)
+            {
+                if (string.IsNullOrWhiteSpace(t.Stat)) continue;
+
+                // exact match
+                var exact = stats.FirstOrDefault(s => s.Subject.Equals(t.Stat, StringComparison.OrdinalIgnoreCase));
+                if (exact != null && !t.Stat.Equals(exact.Subject, StringComparison.Ordinal))
+                {
+                    var old = t.Stat;
+                    t.Stat = exact.Subject;
+                    changed.Add(new { t.Id, oldStat = old, newStat = t.Stat });
+                    continue;
+                }
+
+                // partial match
+                var partial = stats.FirstOrDefault(s => s.Subject.IndexOf(t.Stat, StringComparison.OrdinalIgnoreCase) >= 0
+                                                        || t.Stat.IndexOf(s.Subject, StringComparison.OrdinalIgnoreCase) >= 0);
+                if (partial != null && !t.Stat.Equals(partial.Subject, StringComparison.Ordinal))
+                {
+                    var old = t.Stat;
+                    t.Stat = partial.Subject;
+                    changed.Add(new { t.Id, oldStat = old, newStat = t.Stat });
+                    continue;
+                }
+
+                // fallback: 4-char prefix fuzzy match
+                string Prefix(string x) => x.Length <= 4 ? x : x.Substring(0, 4);
+                var pref = stats.FirstOrDefault(s => Prefix(s.Subject).Equals(Prefix(t.Stat), StringComparison.OrdinalIgnoreCase));
+                if (pref != null && !t.Stat.Equals(pref.Subject, StringComparison.Ordinal))
+                {
+                    var old = t.Stat;
+                    t.Stat = pref.Subject;
+                    changed.Add(new { t.Id, oldStat = old, newStat = t.Stat });
+                }
+            }
+
+            if (changed.Any())
+            {
+                await _db.SaveChangesAsync();
+            }
+
+            return Ok(new { updated = changed.Count, changes = changed });
+        }
     }
 
     public class CreateQuestTemplateDto
