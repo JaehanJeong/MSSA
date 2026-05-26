@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Length_of_Last_Word
+{
+    public class Solution
+    {
+        public int LengthOfLastWord(string s)
+        {
+            int length = 0;
+            int i = s.Length - 1;
+
+            while (i >= 0 && s[i] == ' ') i--;
+
+            while (i >= 0 && s[i] != ' ')
+            {
+                length++;
+                i--;
+            }
+
+            return length;
+        }
+    }
+}
