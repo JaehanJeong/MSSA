@@ -67,3 +67,4 @@ C:\Users\jaeha\source\repos\MSSA\life-optimizer\backend\bin\Debug\net10.0\backen
 C:\Users\jaeha\source\repos\MSSA\life-optimizer\backend\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\jaeha\source\repos\MSSA\life-optimizer\backend\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\jaeha\source\repos\MSSA\life-optimizer\backend\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\jaeha\source\repos\MSSA\life-optimizer\backend\bin\Debug\net10.0\BCrypt.Net-Next.dll

@@ -1,15 +1,15 @@
-function QuestCard({ title, description, stat, rarity, xp, onComplete, onReroll, onDelete }) {
+function QuestCard({ title, description, stat, rarity, xp, onComplete, onReroll, onDelete, onShare }) {
   // Simple color mapping to give each rarity visual weight
   const rarityColors = {
     Common: '#888888',
-    Rare: '#646cff',
+    Rare: '#3b82f6',
     Epic: '#a335ee',
     Legendary: '#ff8000'
   };
 
   return (
     <div style={{
-      border: `2px solid ${rarityColors[rarity] || '#646cff'}`,
+      border: `2px solid ${rarityColors[rarity] || '#f59e0b'}`,
       borderRadius: '12px',
       padding: '20px',
       margin: '10px 0',
@@ -22,24 +22,24 @@ function QuestCard({ title, description, stat, rarity, xp, onComplete, onReroll,
       <div style={{ 
         position: 'absolute', top: '12px', right: '15px', 
         fontSize: '0.65rem', fontWeight: 'bold', letterSpacing: '1px',
-        color: rarityColors[rarity] || '#646cff'
+        color: rarityColors[rarity] || '#f59e0b'
       }}>
         {rarity?.toUpperCase()}
       </div>
 
-      <h3 style={{ color: '#646cff', margin: '0 0 10px 0', maxWidth: '80%' }}>{title}</h3>
+      <h3 style={{ color: '#f59e0b', margin: '0 0 10px 0', maxWidth: '80%' }}>{title}</h3>
       {description && <p style={{ margin: '0 0 10px 0', color: '#ccc', fontSize: '0.9rem' }}>{description}</p>}
       
       <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', color: '#aaa', marginBottom: '15px' }}>
         <div>Boosts: <strong style={{ color: 'white' }}>{stat} (+0.5 Lv)</strong></div>
-        <div style={{ color: '#646cff', fontWeight: 'bold' }}>+{xp} Global XP</div>
+        <div style={{ color: '#f59e0b', fontWeight: 'bold' }}>+{xp} Global XP</div>
       </div>
 
       <div style={{ display: 'flex', gap: '8px' }}>
         <button 
           onClick={onComplete}
           style={{ 
-            backgroundColor: rarityColors[rarity] || '#646cff', 
+            backgroundColor: rarityColors[rarity] || '#f59e0b', 
             color: 'white', 
             border: 'none', 
             padding: '10px',
@@ -81,6 +81,23 @@ function QuestCard({ title, description, stat, rarity, xp, onComplete, onReroll,
         >
           Remove
         </button>
+
+        {onShare && (
+          <button
+            onClick={onShare}
+            style={{
+              background: 'transparent',
+              border: '1px solid #43d9ad',
+              color: '#43d9ad',
+              padding: '10px',
+              borderRadius: '8px',
+              cursor: 'pointer',
+              fontWeight: 'bold'
+            }}
+          >
+            Share
+          </button>
+        )}
       </div>
     </div>
   );

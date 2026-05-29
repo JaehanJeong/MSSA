@@ -18,7 +18,7 @@ namespace LifeOptimizer.Backend.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get([FromHeader(Name = "X-User-Id")] int userId = 0)
         {
             var profile = await _db.Profiles.FirstOrDefaultAsync();
             if (profile == null)
@@ -26,9 +26,15 @@ namespace LifeOptimizer.Backend.Controllers
                 return NotFound(new { message = "Profile not initialized." });
             }
 
-            var quests = await _db.ActiveQuests
+            var query = _db.ActiveQuests
                 .Include(a => a.QuestTemplate)
-                .Where(a => !a.IsCompleted)
+                .Where(a => !a.IsCompleted);
+
+            query = userId > 0
+                ? query.Where(a => a.UserId == userId)
+                : query.Where(a => a.UserId == null);
+
+            var quests = await query
                 .OrderByDescending(a => a.AssignedAt)
                 .Take(profile.QuestCapacity)
                 .ToListAsync();
@@ -52,7 +58,7 @@ namespace LifeOptimizer.Backend.Controllers
         }
 
         [HttpPost("roll")]
-        public async Task<IActionResult> Roll([FromBody] RollRequest request)
+        public async Task<IActionResult> Roll([FromBody] RollRequest request, [FromHeader(Name = "X-User-Id")] int userId = 0)
         {
             var profile = await _db.Profiles.FirstOrDefaultAsync();
             if (profile == null)
@@ -60,12 +66,18 @@ namespace LifeOptimizer.Backend.Controllers
                 return NotFound(new { message = "Profile not initialized." });
             }
 
-            var activeTemplateIds = await _db.ActiveQuests
-                .Where(a => !a.IsCompleted)
-                .Select(a => a.QuestTemplateId)
-                .ToListAsync();
+            var activeQuestsQuery = _db.ActiveQuests.Where(a => !a.IsCompleted);
+            activeQuestsQuery = userId > 0
+                ? activeQuestsQuery.Where(a => a.UserId == userId)
+                : activeQuestsQuery.Where(a => a.UserId == null);
 
-            var templates = await _db.QuestTemplates.ToListAsync();
+            var activeTemplateIds = await activeQuestsQuery.Select(a => a.QuestTemplateId).ToListAsync();
+
+            var templatesQuery = _db.QuestTemplates;
+            var templates = await (userId > 0
+                ? templatesQuery.Where(t => t.UserId == userId)
+                : templatesQuery.Where(t => t.UserId == null))
+                .ToListAsync();
             if (!templates.Any())
             {
                 return BadRequest(new { message = "No quest templates available to roll." });
@@ -77,7 +89,10 @@ namespace LifeOptimizer.Backend.Controllers
                 availableTemplates = templates.ToList();
             }
 
-            var stats = await _db.Stats.ToListAsync();
+            var stats = await (userId > 0
+                ? _db.Stats.Where(s => s.UserId == userId)
+                : _db.Stats.Where(s => s.UserId == null))
+                .ToListAsync();
 
             // Build per-template weights using best-effort matching between template.Stat and Stat.Subject
             double GetWeightForTemplate(QuestTemplate t)
@@ -169,6 +184,7 @@ namespace LifeOptimizer.Backend.Controllers
 
             var activeQuests = chosen.Select(template => new ActiveQuest
             {
+                UserId = userId > 0 ? userId : null,
                 QuestTemplateId = template.Id,
                 AssignedAt = DateTime.UtcNow
             }).ToList();
@@ -198,7 +214,10 @@ namespace LifeOptimizer.Backend.Controllers
             activeQuest.IsCompleted = true;
             var quest = activeQuest.QuestTemplate!;
 
-            var stat = await _db.Stats.FirstOrDefaultAsync(s => s.Subject == quest.Stat);
+            var questUserId = activeQuest.UserId;
+            var stat = questUserId > 0
+                ? await _db.Stats.FirstOrDefaultAsync(s => s.Subject == quest.Stat && s.UserId == questUserId)
+                : await _db.Stats.FirstOrDefaultAsync(s => s.Subject == quest.Stat && s.UserId == null);
             if (stat != null)
             {
                 stat.Level = Math.Min(stat.Level + 1, 100);
@@ -239,9 +258,12 @@ namespace LifeOptimizer.Backend.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Delete(int id, [FromHeader(Name = "X-User-Id")] int userId = 0)
         {
-            var activeQuest = await _db.ActiveQuests.FirstOrDefaultAsync(a => a.Id == id);
+            var activeQuest = userId > 0
+                ? await _db.ActiveQuests.FirstOrDefaultAsync(a => a.Id == id && a.UserId == userId)
+                : await _db.ActiveQuests.FirstOrDefaultAsync(a => a.Id == id && a.UserId == null);
+
             if (activeQuest == null)
             {
                 return NotFound(new { message = "Active quest not found." });
@@ -254,15 +276,21 @@ namespace LifeOptimizer.Backend.Controllers
         }
 
         [HttpPost("reroll")]
-        public async Task<IActionResult> Reroll([FromBody] RerollRequest request)
+        public async Task<IActionResult> Reroll([FromBody] RerollRequest request, [FromHeader(Name = "X-User-Id")] int userId = 0)
         {
-            var activeQuest = await _db.ActiveQuests.FirstOrDefaultAsync(a => a.Id == request.ActiveQuestId);
+            var activeQuest = userId > 0
+                ? await _db.ActiveQuests.FirstOrDefaultAsync(a => a.Id == request.ActiveQuestId && a.UserId == userId)
+                : await _db.ActiveQuests.FirstOrDefaultAsync(a => a.Id == request.ActiveQuestId && a.UserId == null);
+
             if (activeQuest == null)
             {
                 return NotFound(new { message = "Active quest not found." });
             }
 
-            var templates = await _db.QuestTemplates.ToListAsync();
+            var templates = await (userId > 0
+                ? _db.QuestTemplates.Where(t => t.UserId == userId)
+                : _db.QuestTemplates.Where(t => t.UserId == null))
+                .ToListAsync();
             if (!templates.Any()) return BadRequest(new { message = "No quest templates available to reroll." });
 
             var available = templates.Where(t => t.Id != activeQuest.QuestTemplateId).ToList();

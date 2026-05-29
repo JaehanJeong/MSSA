@@ -17,7 +17,7 @@ namespace LifeOptimizer.Backend.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get([FromHeader(Name = "X-User-Id")] int userId = 0)
         {
             var profile = await _db.Profiles.FirstOrDefaultAsync();
             if (profile == null)
@@ -25,7 +25,12 @@ namespace LifeOptimizer.Backend.Controllers
                 return NotFound(new { message = "Profile not initialized." });
             }
 
-            var stats = await _db.Stats.OrderBy(s => s.Subject).ToListAsync();
+            var stats = await (userId > 0
+                ? _db.Stats.Where(s => s.UserId == userId)
+                : _db.Stats.Where(s => s.UserId == null))
+                .OrderBy(s => s.Subject)
+                .ToListAsync();
+
             return Ok(new
             {
                 profile.GlobalXp,
@@ -36,7 +41,7 @@ namespace LifeOptimizer.Backend.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> Update([FromBody] ProfileUpdateDto update)
+        public async Task<IActionResult> Update([FromBody] ProfileUpdateDto update, [FromHeader(Name = "X-User-Id")] int userId = 0)
         {
             var profile = await _db.Profiles.FirstOrDefaultAsync();
             if (profile == null)
@@ -51,22 +56,24 @@ namespace LifeOptimizer.Backend.Controllers
 
             if (update.GlobalLevel > 0)
             {
-                // enforce minimum of 1
                 profile.GlobalLevel = Math.Max(1, update.GlobalLevel);
+                profile.GlobalXp = update.GlobalXp;
             }
 
             if (update.Stats is not null)
             {
                 foreach (var statUpdate in update.Stats)
                 {
-                    var stat = await _db.Stats.FirstOrDefaultAsync(s => s.Id == statUpdate.Id);
+                    var stat = userId > 0
+                        ? await _db.Stats.FirstOrDefaultAsync(s => s.Id == statUpdate.Id && s.UserId == userId)
+                        : await _db.Stats.FirstOrDefaultAsync(s => s.Id == statUpdate.Id && s.UserId == null);
                     if (stat is null)
                     {
                         continue;
                     }
 
                     stat.Level = Math.Clamp(statUpdate.Level, 0, 100);
-                    stat.Weight = Math.Max(0.1, statUpdate.Weight);
+                    stat.Weight = Math.Max(0, statUpdate.Weight);
                 }
             }
 
@@ -79,6 +86,7 @@ namespace LifeOptimizer.Backend.Controllers
     {
         public int QuestCapacity { get; set; }
         public int GlobalLevel { get; set; }
+        public int GlobalXp { get; set; }
         public List<StatUpdateDto>? Stats { get; set; }
     }
 

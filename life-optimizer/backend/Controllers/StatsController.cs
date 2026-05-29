@@ -17,14 +17,18 @@ namespace LifeOptimizer.Backend.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get([FromHeader(Name = "X-User-Id")] int userId = 0)
         {
-            var stats = await _db.Stats.OrderBy(s => s.Subject).ToListAsync();
+            var stats = await (userId > 0
+                ? _db.Stats.Where(s => s.UserId == userId)
+                : _db.Stats.Where(s => s.UserId == null))
+                .OrderBy(s => s.Subject)
+                .ToListAsync();
             return Ok(stats);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CreateStatDto request)
+        public async Task<IActionResult> Create([FromBody] CreateStatDto request, [FromHeader(Name = "X-User-Id")] int userId = 0)
         {
             if (string.IsNullOrWhiteSpace(request.Subject))
             {
@@ -33,8 +37,9 @@ namespace LifeOptimizer.Backend.Controllers
 
             var stat = new Stat
             {
+                UserId = userId > 0 ? userId : null,
                 Subject = request.Subject.Trim(),
-                Level = request.Level > 0 ? request.Level : 10,
+                Level = request.Level > 0 ? request.Level : 0,
                 Weight = request.Weight > 0 ? request.Weight : 1.0
             };
 
@@ -44,12 +49,29 @@ namespace LifeOptimizer.Backend.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Delete(int id, [FromHeader(Name = "X-User-Id")] int userId = 0)
         {
-            var stat = await _db.Stats.FindAsync(id);
+            var stat = userId > 0
+                ? await _db.Stats.FirstOrDefaultAsync(s => s.Id == id && s.UserId == userId)
+                : await _db.Stats.FirstOrDefaultAsync(s => s.Id == id && s.UserId == null);
+
             if (stat == null)
             {
                 return NotFound();
+            }
+
+            var templates = await _db.QuestTemplates
+                .Where(t => t.Stat == stat.Subject && (userId > 0 ? t.UserId == userId : t.UserId == null))
+                .ToListAsync();
+
+            if (templates.Count > 0)
+            {
+                var templateIds = templates.Select(t => t.Id).ToList();
+                var activeQuests = await _db.ActiveQuests
+                    .Where(a => templateIds.Contains(a.QuestTemplateId))
+                    .ToListAsync();
+                _db.ActiveQuests.RemoveRange(activeQuests);
+                _db.QuestTemplates.RemoveRange(templates);
             }
 
             _db.Stats.Remove(stat);

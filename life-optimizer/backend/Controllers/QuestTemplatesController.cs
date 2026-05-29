@@ -17,15 +17,21 @@ namespace LifeOptimizer.Backend.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get([FromHeader(Name = "X-User-Id")] int userId = 0)
         {
-            var quests = await _db.QuestTemplates.OrderBy(q => q.Rarity).ThenBy(q => q.Title).ToListAsync();
+            if (userId <= 0) return Ok(Array.Empty<object>());
+
+            var quests = await _db.QuestTemplates
+                .Where(q => q.UserId == userId)
+                .OrderBy(q => q.Rarity).ThenBy(q => q.Title)
+                .ToListAsync();
             return Ok(quests);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CreateQuestTemplateDto newQuest)
+        public async Task<IActionResult> Create([FromBody] CreateQuestTemplateDto newQuest, [FromHeader(Name = "X-User-Id")] int userId = 0)
         {
+            if (userId <= 0) return Unauthorized(new { message = "Must be logged in to add quests." });
             if (string.IsNullOrWhiteSpace(newQuest.Title) || string.IsNullOrWhiteSpace(newQuest.Stat))
             {
                 return BadRequest(new { message = "Quest title and stat are required." });
@@ -33,6 +39,7 @@ namespace LifeOptimizer.Backend.Controllers
 
             var template = new QuestTemplate
             {
+                UserId = userId,
                 Title = newQuest.Title.Trim(),
                 Stat = newQuest.Stat.Trim(),
                 Rarity = string.IsNullOrWhiteSpace(newQuest.Rarity) ? "Common" : newQuest.Rarity.Trim(),
@@ -45,14 +52,13 @@ namespace LifeOptimizer.Backend.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Delete(int id, [FromHeader(Name = "X-User-Id")] int userId = 0)
         {
-            var template = await _db.QuestTemplates.FindAsync(id);
-            if (template == null)
-            {
-                return NotFound();
-            }
+            var template = await _db.QuestTemplates.FirstOrDefaultAsync(t => t.Id == id && t.UserId == userId);
+            if (template == null) return NotFound();
 
+            var activeQuests = await _db.ActiveQuests.Where(a => a.QuestTemplateId == id).ToListAsync();
+            _db.ActiveQuests.RemoveRange(activeQuests);
             _db.QuestTemplates.Remove(template);
             await _db.SaveChangesAsync();
             return NoContent();
