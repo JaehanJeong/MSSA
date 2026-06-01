@@ -60,8 +60,9 @@ namespace LifeOptimizer.Backend.Controllers
                 return NotFound();
             }
 
+            var statSubjectLower = stat.Subject.ToLower();
             var templates = await _db.QuestTemplates
-                .Where(t => t.Stat == stat.Subject && (userId > 0 ? t.UserId == userId : t.UserId == null))
+                .Where(t => t.Stat.ToLower() == statSubjectLower && (userId > 0 ? t.UserId == userId : t.UserId == null))
                 .ToListAsync();
 
             if (templates.Count > 0)

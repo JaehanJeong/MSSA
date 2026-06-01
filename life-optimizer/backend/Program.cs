@@ -48,17 +48,18 @@ app.Run();
 
 static void EnsureNewTables(AppDbContext db)
 {
+    // Fix #3: Friendship default changed from 'Accepted' to 'Pending' to match the C# model default
     db.Database.ExecuteSqlRaw(@"
         CREATE TABLE IF NOT EXISTS Users (
             Id INTEGER PRIMARY KEY AUTOINCREMENT,
-            Username TEXT NOT NULL,
+            Username TEXT NOT NULL UNIQUE,
             PasswordHash TEXT NOT NULL
         );
         CREATE TABLE IF NOT EXISTS Friendships (
             Id INTEGER PRIMARY KEY AUTOINCREMENT,
             UserId INTEGER NOT NULL,
             FriendId INTEGER NOT NULL,
-            Status TEXT NOT NULL DEFAULT 'Accepted',
+            Status TEXT NOT NULL DEFAULT 'Pending',
             AcceptedAt TEXT NULL
         );
         CREATE TABLE IF NOT EXISTS SharedQuests (
@@ -76,7 +77,7 @@ static void EnsureNewTables(AppDbContext db)
     ");
 
     // Add columns to Friendships if upgrading from old schema (no-op if already present)
-    TryExec(db, "ALTER TABLE Friendships ADD COLUMN Status TEXT NOT NULL DEFAULT 'Accepted'");
+    TryExec(db, "ALTER TABLE Friendships ADD COLUMN Status TEXT NOT NULL DEFAULT 'Pending'");
     TryExec(db, "ALTER TABLE Friendships ADD COLUMN AcceptedAt TEXT NULL");
 
     // Add UserId to QuestTemplates for per-user library ownership
@@ -87,31 +88,34 @@ static void EnsureNewTables(AppDbContext db)
 
     // Add UserId to Stats for per-user attributes
     TryExec(db, "ALTER TABLE Stats ADD COLUMN UserId INTEGER NULL");
+
+    // Fix #1: Add UserId to Profiles for per-user XP/level/capacity
+    TryExec(db, "ALTER TABLE Profiles ADD COLUMN UserId INTEGER NULL");
+
+    // Fix #4: Unique index on Username (no-op if already exists; fails silently if duplicate data exists)
+    TryExec(db, "CREATE UNIQUE INDEX IF NOT EXISTS IX_Users_Username ON Users (Username)");
 }
 
+// Fix #5: Only suppress "duplicate column name" errors (expected when re-running on existing DB).
+// All other exceptions are logged so real problems aren't hidden.
 static void TryExec(AppDbContext db, string sql)
 {
-    try { db.Database.ExecuteSqlRaw(sql); } catch { }
+    try
+    {
+        db.Database.ExecuteSqlRaw(sql);
+    }
+    catch (Exception ex) when (ex.Message.Contains("duplicate column name") || ex.Message.Contains("already exists"))
+    {
+        // Column or index already exists — expected on existing databases, safe to ignore.
+    }
+    catch (Exception ex)
+    {
+        Console.Error.WriteLine($"[Schema] Warning during migration: {ex.Message}");
+    }
 }
 
 static void CleanupOrphanedActiveQuests(AppDbContext db)
 {
-    // Remove any templates with known bad titles and their active quests
-    var badTitles = new[] { "love", "god" };
-    var badTemplates = db.QuestTemplates
-        .AsEnumerable()
-        .Where(t => badTitles.Any(b => t.Title.Contains(b, StringComparison.OrdinalIgnoreCase)))
-        .ToList();
-
-    if (badTemplates.Any())
-    {
-        var badIds = badTemplates.Select(t => t.Id).ToList();
-        var badActive = db.ActiveQuests.Where(a => badIds.Contains(a.QuestTemplateId)).ToList();
-        db.ActiveQuests.RemoveRange(badActive);
-        db.QuestTemplates.RemoveRange(badTemplates);
-        db.SaveChanges();
-    }
-
     // Remove active quests whose template no longer exists
     db.Database.ExecuteSqlRaw(@"
         DELETE FROM ActiveQuests
@@ -132,15 +136,10 @@ static void CleanupOrphanedActiveQuests(AppDbContext db)
 
 static void SeedDefaultData(AppDbContext db)
 {
-    if (!db.Profiles.Any())
+    // Seed the anonymous profile (UserId = null) if it doesn't exist yet
+    if (!db.Profiles.Any(p => p.UserId == null))
     {
-        db.Profiles.Add(new Profile
-        {
-            Id = 1,
-            GlobalXp = 0,
-            GlobalLevel = 1,
-            QuestCapacity = 3
-        });
+        db.Profiles.Add(new Profile { GlobalXp = 0, GlobalLevel = 1, QuestCapacity = 3 });
     }
 
     var oldSeeds = new[] {

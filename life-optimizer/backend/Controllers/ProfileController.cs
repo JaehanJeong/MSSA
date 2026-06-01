@@ -19,11 +19,7 @@ namespace LifeOptimizer.Backend.Controllers
         [HttpGet]
         public async Task<IActionResult> Get([FromHeader(Name = "X-User-Id")] int userId = 0)
         {
-            var profile = await _db.Profiles.FirstOrDefaultAsync();
-            if (profile == null)
-            {
-                return NotFound(new { message = "Profile not initialized." });
-            }
+            var profile = await GetOrCreateProfile(userId);
 
             var stats = await (userId > 0
                 ? _db.Stats.Where(s => s.UserId == userId)
@@ -43,16 +39,10 @@ namespace LifeOptimizer.Backend.Controllers
         [HttpPut]
         public async Task<IActionResult> Update([FromBody] ProfileUpdateDto update, [FromHeader(Name = "X-User-Id")] int userId = 0)
         {
-            var profile = await _db.Profiles.FirstOrDefaultAsync();
-            if (profile == null)
-            {
-                return NotFound(new { message = "Profile not initialized." });
-            }
+            var profile = await GetOrCreateProfile(userId);
 
             if (update.QuestCapacity > 0)
-            {
                 profile.QuestCapacity = update.QuestCapacity;
-            }
 
             if (update.GlobalLevel > 0)
             {
@@ -67,11 +57,7 @@ namespace LifeOptimizer.Backend.Controllers
                     var stat = userId > 0
                         ? await _db.Stats.FirstOrDefaultAsync(s => s.Id == statUpdate.Id && s.UserId == userId)
                         : await _db.Stats.FirstOrDefaultAsync(s => s.Id == statUpdate.Id && s.UserId == null);
-                    if (stat is null)
-                    {
-                        continue;
-                    }
-
+                    if (stat is null) continue;
                     stat.Level = Math.Clamp(statUpdate.Level, 0, 100);
                     stat.Weight = Math.Max(0, statUpdate.Weight);
                 }
@@ -79,6 +65,28 @@ namespace LifeOptimizer.Backend.Controllers
 
             await _db.SaveChangesAsync();
             return NoContent();
+        }
+
+        private async Task<Profile> GetOrCreateProfile(int userId)
+        {
+            var profile = userId > 0
+                ? await _db.Profiles.FirstOrDefaultAsync(p => p.UserId == userId)
+                : await _db.Profiles.FirstOrDefaultAsync(p => p.UserId == null);
+
+            if (profile is null)
+            {
+                profile = new Profile
+                {
+                    UserId = userId > 0 ? userId : null,
+                    GlobalXp = 0,
+                    GlobalLevel = 1,
+                    QuestCapacity = 3
+                };
+                _db.Profiles.Add(profile);
+                await _db.SaveChangesAsync();
+            }
+
+            return profile;
         }
     }
 

@@ -20,7 +20,7 @@ namespace LifeOptimizer.Backend.Controllers
         [HttpGet]
         public async Task<IActionResult> Get([FromHeader(Name = "X-User-Id")] int userId = 0)
         {
-            var profile = await _db.Profiles.FirstOrDefaultAsync();
+            var profile = await GetOrCreateProfile(userId);
             if (profile == null)
             {
                 return NotFound(new { message = "Profile not initialized." });
@@ -60,7 +60,7 @@ namespace LifeOptimizer.Backend.Controllers
         [HttpPost("roll")]
         public async Task<IActionResult> Roll([FromBody] RollRequest request, [FromHeader(Name = "X-User-Id")] int userId = 0)
         {
-            var profile = await _db.Profiles.FirstOrDefaultAsync();
+            var profile = await GetOrCreateProfile(userId);
             if (profile == null)
             {
                 return NotFound(new { message = "Profile not initialized." });
@@ -94,27 +94,13 @@ namespace LifeOptimizer.Backend.Controllers
                 : _db.Stats.Where(s => s.UserId == null))
                 .ToListAsync();
 
-            // Build per-template weights using best-effort matching between template.Stat and Stat.Subject
+            // Only exact case-insensitive match — fuzzy matching belongs in /normalize, not here.
+            // Orphaned templates (stat deleted or renamed) must return 0 so they are never rolled.
             double GetWeightForTemplate(QuestTemplate t)
             {
                 if (string.IsNullOrWhiteSpace(t.Stat)) return 0.0;
-
-                // try exact match (case-insensitive)
                 var exact = stats.FirstOrDefault(s => s.Subject.Equals(t.Stat, StringComparison.OrdinalIgnoreCase));
-                if (exact != null) return Math.Max(exact.Weight, 0.0);
-
-                // try contains / partial matches (stat contains template or template contains stat)
-                var partial = stats.FirstOrDefault(s => s.Subject.IndexOf(t.Stat, StringComparison.OrdinalIgnoreCase) >= 0
-                                                        || t.Stat.IndexOf(s.Subject, StringComparison.OrdinalIgnoreCase) >= 0);
-                if (partial != null) return Math.Max(partial.Weight, 0.0);
-                
-                     // fallback: 4-char prefix fuzzy match (helps for 'Intelligence' vs 'Intellect')
-                     string Prefix(string x) => x.Length <= 4 ? x : x.Substring(0, 4);
-                     var pref = stats.FirstOrDefault(s => Prefix(s.Subject).Equals(Prefix(t.Stat), StringComparison.OrdinalIgnoreCase));
-                     if (pref != null) return Math.Max(pref.Weight, 0.0);
-
-                // fallback to zero weight
-                return 0.0;
+                return exact != null ? Math.Max(exact.Weight, 0.0) : 0.0;
             }
 
             // Only consider templates that map to an existing stat
@@ -165,7 +151,7 @@ namespace LifeOptimizer.Backend.Controllers
                     for (var index = 0; index < rollCandidates.Count; index++)
                     {
                         cumulative += weights[index];
-                        if (pick <= cumulative)
+                        if (pick < cumulative)
                         {
                             selected = rollCandidates[index];
                             break;
@@ -223,7 +209,7 @@ namespace LifeOptimizer.Backend.Controllers
                 stat.Level = Math.Min(stat.Level + 1, 100);
             }
 
-            var profile = await _db.Profiles.FirstOrDefaultAsync();
+            var profile = await GetOrCreateProfile(questUserId.HasValue ? questUserId.Value : 0);
             if (profile == null)
             {
                 return NotFound(new { message = "Profile not initialized." });
@@ -296,7 +282,39 @@ namespace LifeOptimizer.Backend.Controllers
             var available = templates.Where(t => t.Id != activeQuest.QuestTemplateId).ToList();
             if (!available.Any()) return BadRequest(new { message = "No alternative templates available to reroll." });
 
-            var newTemplate = available.OrderBy(_ => Guid.NewGuid()).First();
+            var rerollStats = await (userId > 0
+                ? _db.Stats.Where(s => s.UserId == userId)
+                : _db.Stats.Where(s => s.UserId == null))
+                .ToListAsync();
+
+            double GetRerollWeight(QuestTemplate t)
+            {
+                if (string.IsNullOrWhiteSpace(t.Stat)) return 0.0;
+                var exact = rerollStats.FirstOrDefault(s => s.Subject.Equals(t.Stat, StringComparison.OrdinalIgnoreCase));
+                return exact != null ? Math.Max(exact.Weight, 0.0) : 0.0;
+            }
+
+            var weightedAvailable = available.Where(t => GetRerollWeight(t) > 0).ToList();
+            var rerollPool = weightedAvailable.Any() ? weightedAvailable : available;
+            var rerollWeights = rerollPool.Select(t => GetRerollWeight(t)).ToList();
+            var rerollTotal = rerollWeights.Sum();
+
+            QuestTemplate newTemplate;
+            if (rerollTotal <= 0)
+            {
+                newTemplate = rerollPool.OrderBy(_ => Guid.NewGuid()).First();
+            }
+            else
+            {
+                var pick = Random.Shared.NextDouble() * rerollTotal;
+                var cumulative = 0.0;
+                newTemplate = rerollPool.Last();
+                for (var i = 0; i < rerollPool.Count; i++)
+                {
+                    cumulative += rerollWeights[i];
+                    if (pick < cumulative) { newTemplate = rerollPool[i]; break; }
+                }
+            }
 
             activeQuest.QuestTemplateId = newTemplate.Id;
             activeQuest.AssignedAt = DateTime.UtcNow;
@@ -317,6 +335,27 @@ namespace LifeOptimizer.Backend.Controllers
                     newTemplate.XpReward
                 }
             });
+        }
+        private async Task<Profile?> GetOrCreateProfile(int userId)
+        {
+            var profile = userId > 0
+                ? await _db.Profiles.FirstOrDefaultAsync(p => p.UserId == userId)
+                : await _db.Profiles.FirstOrDefaultAsync(p => p.UserId == null);
+
+            if (profile is null)
+            {
+                profile = new Profile
+                {
+                    UserId = userId > 0 ? userId : null,
+                    GlobalXp = 0,
+                    GlobalLevel = 1,
+                    QuestCapacity = 3
+                };
+                _db.Profiles.Add(profile);
+                await _db.SaveChangesAsync();
+            }
+
+            return profile;
         }
     }
 
