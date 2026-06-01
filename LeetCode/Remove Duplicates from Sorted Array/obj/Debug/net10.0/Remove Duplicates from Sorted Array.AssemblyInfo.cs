@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Remove Duplicates from Sorted Array")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11031fc151f12f1e053392ef6e7318995dc87514")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb1fe3b79ebf66d10e084842c08de208e033d77c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Remove Duplicates from Sorted Array")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Remove Duplicates from Sorted Array")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

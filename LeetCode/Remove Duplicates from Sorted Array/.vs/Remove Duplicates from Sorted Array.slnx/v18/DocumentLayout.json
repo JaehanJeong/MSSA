@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\jaeha\\source\\repos\\MSSA\\LeetCode\\Remove Duplicates from Sorted Array\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{111C0614-6942-4FE6-AFD4-523A2FEE6111}|Remove Duplicates from Sorted Array.csproj|c:\\users\\jaeha\\source\\repos\\mssa\\leetcode\\remove duplicates from sorted array\\solution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{111C0614-6942-4FE6-AFD4-523A2FEE6111}|Remove Duplicates from Sorted Array.csproj|solutionrelative:solution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{111C0614-6942-4FE6-AFD4-523A2FEE6111}|Remove Duplicates from Sorted Array.csproj|c:\\users\\jaeha\\source\\repos\\mssa\\leetcode\\remove duplicates from sorted array\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{111C0614-6942-4FE6-AFD4-523A2FEE6111}|Remove Duplicates from Sorted Array.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38B28D5A-539F-78AE-0704-D2515CD79072}|Remove Duplicates from Sorted Array.csproj|c:\\users\\jaeha\\source\\repos\\mssa\\leetcode\\remove duplicates from sorted array\\solution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38B28D5A-539F-78AE-0704-D2515CD79072}|Remove Duplicates from Sorted Array.csproj|solutionrelative:solution.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,22 +28,9 @@
               "RelativeDocumentMoniker": "Solution.cs",
               "ToolTip": "C:\\Users\\jaeha\\source\\repos\\MSSA\\LeetCode\\Remove Duplicates from Sorted Array\\Solution.cs",
               "RelativeToolTip": "Solution.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-20T19:37:12.904Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\MSSA\\LeetCode\\Remove Duplicates from Sorted Array\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\MSSA\\LeetCode\\Remove Duplicates from Sorted Array\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T19:37:01.923Z",
               "EditorCaption": ""
             },
             {
