@@ -1,0 +1,17 @@
+C:\Users\jaeha\source\repos\MSSA\Week 10\Notepad Demo\bin\Debug\net10.0-windows\Notepad Demo.exe
+C:\Users\jaeha\source\repos\MSSA\Week 10\Notepad Demo\bin\Debug\net10.0-windows\Notepad Demo.deps.json
+C:\Users\jaeha\source\repos\MSSA\Week 10\Notepad Demo\bin\Debug\net10.0-windows\Notepad Demo.runtimeconfig.json
+C:\Users\jaeha\source\repos\MSSA\Week 10\Notepad Demo\bin\Debug\net10.0-windows\Notepad Demo.dll
+C:\Users\jaeha\source\repos\MSSA\Week 10\Notepad Demo\bin\Debug\net10.0-windows\Notepad Demo.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 10\Notepad Demo\obj\Debug\net10.0-windows\Notepad_Demo.Form1.resources
+C:\Users\jaeha\source\repos\MSSA\Week 10\Notepad Demo\obj\Debug\net10.0-windows\Notepad Demo.csproj.GenerateResource.cache
+C:\Users\jaeha\source\repos\MSSA\Week 10\Notepad Demo\obj\Debug\net10.0-windows\Notepad Demo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\MSSA\Week 10\Notepad Demo\obj\Debug\net10.0-windows\Notepad Demo.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 10\Notepad Demo\obj\Debug\net10.0-windows\Notepad Demo.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\MSSA\Week 10\Notepad Demo\obj\Debug\net10.0-windows\Notepad Demo.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 10\Notepad Demo\obj\Debug\net10.0-windows\Notepad Demo.sourcelink.json
+C:\Users\jaeha\source\repos\MSSA\Week 10\Notepad Demo\obj\Debug\net10.0-windows\Notepad Demo.dll
+C:\Users\jaeha\source\repos\MSSA\Week 10\Notepad Demo\obj\Debug\net10.0-windows\refint\Notepad Demo.dll
+C:\Users\jaeha\source\repos\MSSA\Week 10\Notepad Demo\obj\Debug\net10.0-windows\Notepad Demo.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 10\Notepad Demo\obj\Debug\net10.0-windows\Notepad Demo.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\MSSA\Week 10\Notepad Demo\obj\Debug\net10.0-windows\ref\Notepad Demo.dll

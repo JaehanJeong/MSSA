@@ -1,0 +1,15 @@
+C:\Users\jaeha\source\repos\MSSA\Week 10\Mod6Serializationdemo\bin\Debug\net10.0\Mod6Serializationdemo.exe
+C:\Users\jaeha\source\repos\MSSA\Week 10\Mod6Serializationdemo\bin\Debug\net10.0\Mod6Serializationdemo.deps.json
+C:\Users\jaeha\source\repos\MSSA\Week 10\Mod6Serializationdemo\bin\Debug\net10.0\Mod6Serializationdemo.runtimeconfig.json
+C:\Users\jaeha\source\repos\MSSA\Week 10\Mod6Serializationdemo\bin\Debug\net10.0\Mod6Serializationdemo.dll
+C:\Users\jaeha\source\repos\MSSA\Week 10\Mod6Serializationdemo\bin\Debug\net10.0\Mod6Serializationdemo.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 10\Mod6Serializationdemo\obj\Debug\net10.0\Mod6Serializationdemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\MSSA\Week 10\Mod6Serializationdemo\obj\Debug\net10.0\Mod6Serializationdemo.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 10\Mod6Serializationdemo\obj\Debug\net10.0\Mod6Serializationdemo.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\MSSA\Week 10\Mod6Serializationdemo\obj\Debug\net10.0\Mod6Serializationdemo.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 10\Mod6Serializationdemo\obj\Debug\net10.0\Mod6Serializationdemo.sourcelink.json
+C:\Users\jaeha\source\repos\MSSA\Week 10\Mod6Serializationdemo\obj\Debug\net10.0\Mod6Serializationdemo.dll
+C:\Users\jaeha\source\repos\MSSA\Week 10\Mod6Serializationdemo\obj\Debug\net10.0\refint\Mod6Serializationdemo.dll
+C:\Users\jaeha\source\repos\MSSA\Week 10\Mod6Serializationdemo\obj\Debug\net10.0\Mod6Serializationdemo.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 10\Mod6Serializationdemo\obj\Debug\net10.0\Mod6Serializationdemo.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\MSSA\Week 10\Mod6Serializationdemo\obj\Debug\net10.0\ref\Mod6Serializationdemo.dll
