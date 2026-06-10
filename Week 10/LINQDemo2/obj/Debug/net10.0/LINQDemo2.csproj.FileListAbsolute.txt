@@ -1,0 +1,15 @@
+C:\Users\jaeha\source\repos\MSSA\Week 10\LINQDemo2\bin\Debug\net10.0\LINQDemo2.exe
+C:\Users\jaeha\source\repos\MSSA\Week 10\LINQDemo2\bin\Debug\net10.0\LINQDemo2.deps.json
+C:\Users\jaeha\source\repos\MSSA\Week 10\LINQDemo2\bin\Debug\net10.0\LINQDemo2.runtimeconfig.json
+C:\Users\jaeha\source\repos\MSSA\Week 10\LINQDemo2\bin\Debug\net10.0\LINQDemo2.dll
+C:\Users\jaeha\source\repos\MSSA\Week 10\LINQDemo2\bin\Debug\net10.0\LINQDemo2.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 10\LINQDemo2\obj\Debug\net10.0\LINQDemo2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jaeha\source\repos\MSSA\Week 10\LINQDemo2\obj\Debug\net10.0\LINQDemo2.AssemblyInfoInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 10\LINQDemo2\obj\Debug\net10.0\LINQDemo2.AssemblyInfo.cs
+C:\Users\jaeha\source\repos\MSSA\Week 10\LINQDemo2\obj\Debug\net10.0\LINQDemo2.csproj.CoreCompileInputs.cache
+C:\Users\jaeha\source\repos\MSSA\Week 10\LINQDemo2\obj\Debug\net10.0\LINQDemo2.sourcelink.json
+C:\Users\jaeha\source\repos\MSSA\Week 10\LINQDemo2\obj\Debug\net10.0\LINQDemo2.dll
+C:\Users\jaeha\source\repos\MSSA\Week 10\LINQDemo2\obj\Debug\net10.0\refint\LINQDemo2.dll
+C:\Users\jaeha\source\repos\MSSA\Week 10\LINQDemo2\obj\Debug\net10.0\LINQDemo2.pdb
+C:\Users\jaeha\source\repos\MSSA\Week 10\LINQDemo2\obj\Debug\net10.0\LINQDemo2.genruntimeconfig.cache
+C:\Users\jaeha\source\repos\MSSA\Week 10\LINQDemo2\obj\Debug\net10.0\ref\LINQDemo2.dll
