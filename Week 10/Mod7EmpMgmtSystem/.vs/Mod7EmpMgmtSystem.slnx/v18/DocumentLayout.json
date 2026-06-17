@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 10\\Mod7EmpMgmtSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5D5D331D-85FE-4D3A-864C-FF207713AAF3}|Mod7EmpMgmtSystem.csproj|c:\\users\\jaeha\\source\\repos\\mssa\\week 10\\mod7empmgmtsystem\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D5D331D-85FE-4D3A-864C-FF207713AAF3}|Mod7EmpMgmtSystem.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8C3C40FE-07C6-488A-7AB3-2E30DD47D8FD}|Mod7EmpMgmtSystem.csproj|c:\\users\\jaeha\\source\\repos\\mssa\\week 10\\mod7empmgmtsystem\\services\\crud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C3C40FE-07C6-488A-7AB3-2E30DD47D8FD}|Mod7EmpMgmtSystem.csproj|solutionrelative:services\\crud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 10\\Mod7EmpMgmtSystem\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 10\\Mod7EmpMgmtSystem\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAwwEIAAAAJAAAAAAAAAA==",
+              "Title": "CRUD.cs",
+              "DocumentMoniker": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 10\\Mod7EmpMgmtSystem\\Services\\CRUD.cs",
+              "RelativeDocumentMoniker": "Services\\CRUD.cs",
+              "ToolTip": "C:\\Users\\jaeha\\source\\repos\\MSSA\\Week 10\\Mod7EmpMgmtSystem\\Services\\CRUD.cs",
+              "RelativeToolTip": "Services\\CRUD.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowCEAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-10T20:12:50.904Z",
+              "WhenOpened": "2026-06-11T20:54:56.741Z",
               "EditorCaption": ""
             },
             {

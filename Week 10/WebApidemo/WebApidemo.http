@@ -1,0 +1,6 @@
+@WebApidemo_HostAddress = http://localhost:5093
+
+GET {{WebApidemo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
