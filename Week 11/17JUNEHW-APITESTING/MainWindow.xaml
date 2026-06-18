@@ -1,0 +1,30 @@
+﻿<Window x:Class="TodoClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Todo List" Height="500" Width="500">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Todo list -->
+        <ListBox x:Name="TodoListBox" Grid.Row="0" Margin="0,0,0,10"
+                  DisplayMemberPath="Title"
+                  SelectionChanged="TodoListBox_SelectionChanged"/>
+
+        <!-- Input row -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBox x:Name="TitleTextBox" Width="250" Margin="0,0,10,0"/>
+            <CheckBox x:Name="IsCompleteCheckBox" Content="Complete" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <!-- Buttons row -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Button x:Name="AddButton" Content="Add" Width="80" Margin="0,0,10,0" Click="AddButton_Click"/>
+            <Button x:Name="UpdateButton" Content="Update" Width="80" Margin="0,0,10,0" Click="UpdateButton_Click"/>
+            <Button x:Name="DeleteButton" Content="Delete" Width="80" Click="DeleteButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

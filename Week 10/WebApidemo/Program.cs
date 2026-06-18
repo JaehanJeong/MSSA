@@ -13,6 +13,7 @@ namespace WebApidemo
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.AddEndpointsApiExplorer();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddSwaggerGen();
             builder.Services.AddDbContext<MovieContext>(options => options.UseSqlite("Data Source=movies.db"));
@@ -28,7 +29,7 @@ namespace WebApidemo
             using(var scope = app.Services.CreateScope())
             {
                 var db=scope.ServiceProvider.GetRequiredService<MovieContext>();
-                db.Database.EnsureDeleted();
+                //db.Database.EnsureDeleted();
                 db.Database.EnsureCreated();
             }
 

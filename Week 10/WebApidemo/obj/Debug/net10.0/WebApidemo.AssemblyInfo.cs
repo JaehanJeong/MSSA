@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebApidemo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ae0051735325ebda4ad614478274440c2946712")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8b96ac1704e086f6c85038fbda168ef745e7b86")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebApidemo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebApidemo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
