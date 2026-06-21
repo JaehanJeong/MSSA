@@ -23,11 +23,8 @@ namespace Assignment_10._3.Migrations
 
             modelBuilder.Entity("Assignment_10._3.Models.Car", b =>
                 {
-                    b.Property<int>("VIN")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("VIN"));
+                    b.Property<string>("VIN")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Make")
                         .IsRequired()
@@ -46,48 +43,6 @@ namespace Assignment_10._3.Migrations
                     b.HasKey("VIN");
 
                     b.ToTable("Cars");
-
-                    b.HasData(
-                        new
-                        {
-                            VIN = 1234,
-                            Make = "Toyota",
-                            Model = "Prius",
-                            Price = 20000.0,
-                            Year = 2020
-                        },
-                        new
-                        {
-                            VIN = 2345,
-                            Make = "Honda",
-                            Model = "Civic",
-                            Price = 25000.0,
-                            Year = 2023
-                        },
-                        new
-                        {
-                            VIN = 3456,
-                            Make = "Tesla",
-                            Model = "Cyber Truck",
-                            Price = 50000.0,
-                            Year = 2024
-                        },
-                        new
-                        {
-                            VIN = 4567,
-                            Make = "Hyundai",
-                            Model = "Ioniq",
-                            Price = 40000.0,
-                            Year = 2026
-                        },
-                        new
-                        {
-                            VIN = 5678,
-                            Make = "Ford",
-                            Model = "F150",
-                            Price = 40000.0,
-                            Year = 2026
-                        });
                 });
 #pragma warning restore 612, 618
         }
