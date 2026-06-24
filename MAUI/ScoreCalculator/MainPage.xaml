@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScoreCalculator.MainPage">
+    <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, *, Auto" RowSpacing="20">
+        <Label Text="Enter Score here" FontSize="20" Grid.Row="0" Grid.Column="0"/>
+        <Entry x:Name="txtScoreEntry" Keyboard="Numeric" Grid.Row="0" Grid.Column="1"
+               Placeholder="Enter score here"/>
+
+        <Button Text="Add" x:Name="btnAdd" Clicked="btnAdd_Clicked" Grid.Row="0" Grid.Column="2"/>
+        <Label Text="Score Total" FontSize="20" Grid.Row="1" Grid.Column="0"/>
+        <Label x:Name= "lblScoreTotal" Text="0" FontSize="20" Grid.Row="1" Grid.Column="1"/>
+        <Label Text="Score Count" FontSize="20" Grid.Row="2" Grid.Column="0"/>
+        <Label x:Name= "lblScoreCount" Text="0" FontSize="20" Grid.Row="2" Grid.Column="1"/>
+        <Label Text="Score Average" FontSize="20" Grid.Row="3" Grid.Column="0"/>
+        <Label x:Name= "lblScoreAverage" Text="0" FontSize="20" Grid.Row="3" Grid.Column="1"/>
+        <Button Text="Reset" x:Name="btnReset" Clicked="btnReset_Clicked"  Grid.Row="4" Grid.Column="0"
+                Grid.ColumnSpan="2"/>
+        <Button Text="Exit" x:Name="btnExit" Clicked="btnExit_Clicked" Grid.Row="4" Grid.Column="2"/>
+    </Grid>
+
+</ContentPage>
