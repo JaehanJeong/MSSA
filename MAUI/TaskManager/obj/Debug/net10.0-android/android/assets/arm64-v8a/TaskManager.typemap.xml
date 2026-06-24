@@ -1,0 +1,10 @@
+<api type="debug" assembly-name="TaskManager" mvid="aa410414d15a4635828b0885400858f5">
+  <java-to-managed>
+    <entry java-name="crc64addee25fb5c22997/MainActivity" managed-name="TaskManager.MainActivity, TaskManager" managed-type-token-id="33554444" />
+    <entry java-name="crc64addee25fb5c22997/MainApplication" managed-name="TaskManager.MainApplication, TaskManager" managed-type-token-id="33554445" />
+  </java-to-managed>
+  <managed-to-java>
+    <entry java-name="crc64addee25fb5c22997/MainActivity" managed-name="TaskManager.MainActivity, TaskManager" managed-type-token-id="33554444" />
+    <entry java-name="crc64addee25fb5c22997/MainApplication" managed-name="TaskManager.MainApplication, TaskManager" managed-type-token-id="33554445" />
+  </managed-to-java>
+</api>

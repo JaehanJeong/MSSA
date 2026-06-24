@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TaskManager</name>
+    </assembly>
+    <members>
+        <member name="T:TaskManager.ViewModels.DetailsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskManager.ViewModels.DetailsViewModel.TaskName">
+            <inheritdoc cref="F:TaskManager.ViewModels.DetailsViewModel.taskName"/>
+        </member>
+        <member name="F:TaskManager.ViewModels.DetailsViewModel.backCommand">
+            <summary>The backing field for <see cref="P:TaskManager.ViewModels.DetailsViewModel.BackCommand"/>.</summary>
+        </member>
+        <member name="P:TaskManager.ViewModels.DetailsViewModel.BackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TaskManager.ViewModels.DetailsViewModel.Back"/>.</summary>
+        </member>
+        <member name="T:TaskManager.ViewModels.MainViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:TaskManager.ViewModels.MainViewModel.TaskName">
+            <inheritdoc cref="F:TaskManager.ViewModels.MainViewModel.taskName"/>
+        </member>
+        <member name="P:TaskManager.ViewModels.MainViewModel.Tasks">
+            <inheritdoc cref="F:TaskManager.ViewModels.MainViewModel.tasks"/>
+        </member>
+        <member name="F:TaskManager.ViewModels.MainViewModel.addCommand">
+            <summary>The backing field for <see cref="P:TaskManager.ViewModels.MainViewModel.AddCommand"/>.</summary>
+        </member>
+        <member name="P:TaskManager.ViewModels.MainViewModel.AddCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:TaskManager.ViewModels.MainViewModel.Add"/>.</summary>
+        </member>
+        <member name="F:TaskManager.ViewModels.MainViewModel.deleteCommand">
+            <summary>The backing field for <see cref="P:TaskManager.ViewModels.MainViewModel.DeleteCommand"/>.</summary>
+        </member>
+        <member name="P:TaskManager.ViewModels.MainViewModel.DeleteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:TaskManager.ViewModels.MainViewModel.Delete(System.String)"/>.</summary>
+        </member>
+        <member name="T:TaskManager.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TaskName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TaskName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Tasks">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Tasks" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TaskName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TaskName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Tasks">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Tasks" generated properties.</summary>
+        </member>
+    </members>
+</doc>
