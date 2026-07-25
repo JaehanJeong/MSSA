@@ -1,0 +1,10 @@
+<api type="debug" assembly-name="MonkeyFinder" mvid="2426013b09ce4e5ca92edd00d4c3ada0">
+  <java-to-managed>
+    <entry java-name="crc64c2e3c35ecaf1aecc/MainActivity" managed-name="MonkeyFinder.MainActivity, MonkeyFinder" managed-type-token-id="33554444" />
+    <entry java-name="crc64c2e3c35ecaf1aecc/MainApplication" managed-name="MonkeyFinder.MainApplication, MonkeyFinder" managed-type-token-id="33554445" />
+  </java-to-managed>
+  <managed-to-java>
+    <entry java-name="crc64c2e3c35ecaf1aecc/MainActivity" managed-name="MonkeyFinder.MainActivity, MonkeyFinder" managed-type-token-id="33554444" />
+    <entry java-name="crc64c2e3c35ecaf1aecc/MainApplication" managed-name="MonkeyFinder.MainApplication, MonkeyFinder" managed-type-token-id="33554445" />
+  </managed-to-java>
+</api>

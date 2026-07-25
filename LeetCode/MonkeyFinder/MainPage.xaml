@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MonkeyFinder.MainPage"
+             xmlns:model="clr-namespace:MonkeyFinder.Models"
+             xmlns:viewmodel="clr-namespace:MonkeyFinder.ViewModels"
+             x:DataType="viewmodel:MonkeysViewModel"
+             Title="{Binding Title}">
+
+    <Grid ColumnDefinitions="*,*" ColumnSpacing="5" RowDefinitions="*,100" RowSpacing="5">
+        <CollectionView BackgroundColor="Beige" Grid.ColumnSpan="2" ItemsSource="{Binding Monkeys}"
+                        SelectionMode="None">
+            <CollectionView.EmptyView>
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="200"
+                             WidthRequest="200">
+                    <Image Source="nodata.png" HorizontalOptions="Center" VerticalOptions="Center" 
+                           Aspect="AspectFill"/>
+                </StackLayout>
+            </CollectionView.EmptyView>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Monkey">
+                    <Grid Padding="10">
+                        <Border HeightRequest="125" Padding="1">
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MonkeysViewModel}},Path=GoToDetailsCommand}"
+                              CommandParameter="{Binding .}"/>
+                            </Border.GestureRecognizers>
+                            <Grid ColumnDefinitions="125,*" Padding="1">
+                                <Image Source="{Binding Image}" Aspect="AspectFill"
+                                        WidthRequest="125" HeightRequest="125"/>
+                                <VerticalStackLayout Grid.Column="1" Padding="10" VerticalOptions="Center">
+                                    <Label Text="{Binding Name}"/>
+                                    <Label Text="{Binding Location}"/>
+                                </VerticalStackLayout>
+                            </Grid>
+                        </Border>
+                        
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button Text="Get Monkeys" Grid.Row="1" Margin="10" Command="{Binding GetMonkeysCommand}"
+            IsEnabled="{Binding IsNotBusy}"/>
+        <Button Text="Get Closest Monkey" Grid.Row="1" Grid.Column="1" Margin="10"
+                Command="{Binding GetClosestMonkeyCommand}" IsEnabled="{Binding IsNotBusy}"/>
+        <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" Grid.RowSpan="2"
+                           Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center"/>
+    </Grid>
+
+</ContentPage>

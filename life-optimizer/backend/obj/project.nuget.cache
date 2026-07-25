@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jsok0VmQIqw=",
+  "dgSpecHash": "f/CYKrAq5f0=",
   "success": true,
   "projectFilePath": "C:\\Users\\jaeha\\source\\repos\\MSSA\\life-optimizer\\backend\\backend.csproj",
   "expectedPackageFiles": [
@@ -25,5 +25,30 @@
     "C:\\Users\\jaeha\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\10.1.7\\swashbuckle.aspnetcore.swaggergen.10.1.7.nupkg.sha512",
     "C:\\Users\\jaeha\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\10.1.7\\swashbuckle.aspnetcore.swaggerui.10.1.7.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'Microsoft.OpenApi' 2.4.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc",
+      "projectPath": "C:\\Users\\jaeha\\source\\repos\\MSSA\\life-optimizer\\backend\\backend.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\jaeha\\source\\repos\\MSSA\\life-optimizer\\backend\\backend.csproj",
+      "libraryId": "Microsoft.OpenApi",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'SQLitePCLRaw.lib.e_sqlite3' 2.1.11 has a known high severity vulnerability, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
+      "projectPath": "C:\\Users\\jaeha\\source\\repos\\MSSA\\life-optimizer\\backend\\backend.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\jaeha\\source\\repos\\MSSA\\life-optimizer\\backend\\backend.csproj",
+      "libraryId": "SQLitePCLRaw.lib.e_sqlite3",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
 }
